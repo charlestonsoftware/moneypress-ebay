@@ -22,4 +22,30 @@ else {
     die('Missing WPCSL-license sub-module.');
 }
 
+//// SETTINGS ////////////////////////////////////////////////////////
+
+/**
+ * This section defines the settings for the admin menu.
+ */
+
+$MP_ebay_settings = new wpCSL_Settings(
+    array(
+        'prefix'           => 'csl-mp-ebay',
+        'name'             => 'Moneypress eBay Edition',
+        'url'              => 'http://cybersprocket.com/products/mp-ebay/',
+        'paypal_button_id' => 'TEMP'
+    )
+);
+
+$MP_ebay_settings->add_section(
+    array(
+        'name'        => 'Primary Settings',
+        'description' => '<p>You will need an <a href="https://developer.ebay.com/join/Default.aspx" target="_new">eBay developer account</a> to fill in these fields.</p>'
+    )
+);
+
+$MP_ebay_settings->add_item('Primary Settings', 'eBay App ID', 'csl-mp-ebay-app-id', 'text', false);
+$MP_ebay_settings->add_item('Primary Settings', 'Number of Products', 'csl-mp-ebay-product-count', 'text', false,
+                           'The number of products to show on your site.');
+
 ?>

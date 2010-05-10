@@ -35,6 +35,14 @@ require_once('Panhandler/Panhandler.php');
 require_once('Panhandler/Drivers/eBay.php');
 
 /**
+ * Setup actions and filters.
+ */
+if (is_admin()) {
+    add_action('admin_menu', 'MP_ebay_admin_menu');
+    add_action('admin_init', 'MP_ebay_register_settings');
+}
+
+/**
  * Add the [ebay_show_items] short code.  The code requires the
  * attribute 'keywords', which is a list of product keywords to search
  * for.  The keywords should be separated by white-space.
@@ -42,6 +50,35 @@ require_once('Panhandler/Drivers/eBay.php');
 add_shortcode('ebay_show_items', 'MP_ebay_show_items');
 
 //// FUNCTIONS ///////////////////////////////////////////////////////
+
+/**
+ * Adds our plugin to the admin menu.
+ */
+function MP_ebay_admin_menu() {
+    add_options_page(
+        'Moneypress eBay Options',
+        'Moneypress eBay Edition',
+        'administrator',
+        'cls-mp-ebay-options',
+        'MP_ebay_options_page'
+    );
+}
+
+/**
+ * Adds our settings to the admin panel.
+ */
+function MP_ebay_register_settings() {
+    global $MP_ebay_settings;
+    $MP_ebay_settings->register();
+}
+
+/**
+ * Displays settings on the options page.
+ */
+function MP_ebay_options_page() {
+    global $MP_ebay_settings;
+    $MP_ebay_settings->render_settings_page();
+}
 
 /**
  * Processes our short code.
@@ -62,6 +99,12 @@ function MP_ebay_show_items($attributes, $content = null) {
 
     $app_id = get_option('csl-mp-ebay-app-id');
     $ebay   = new eBayPanhandler($app_id);
+
+    $product_count = get_option('csl-mp-ebay-product-count');
+
+    if ($product_count) {
+        $ebay->set_maximum_product_count($product_count);
+    }
 
     return MP_ebay_format_all_products(
         $ebay->get_products_by_keywords(array($keywords))
