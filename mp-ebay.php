@@ -103,9 +103,12 @@ function MP_ebay_show_items($attributes, $content = null) {
     global $current_user;
     get_currentuserinfo();
 
-    if (($current_user->wp_capabilities['administrator']) === false &&
-        ($current_user->user_level === '10') === false &&
-        get_option('csl-mp-ebay-purchased') === false) {
+    // Make sure the user is either an admin, in which case he
+    // gets to view the results of the plugin, or otherwise
+    // make sure the license has been purchased.
+    if (($current_user->wp_capabilities['administrator'] == false) &&
+        ($current_user->user_level != '10') &&
+        (get_option('csl-mp-ebay-purchased') == false)) {
         return;
     }
 
