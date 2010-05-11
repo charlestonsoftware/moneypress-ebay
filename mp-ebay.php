@@ -83,6 +83,8 @@ function MP_ebay_admin_menu() {
  */
 function MP_ebay_register_settings() {
     global $MP_ebay_settings;
+    wpCSL_initialize_license_options('csl-mp-ebay');
+    wpCSL_check_product_key('csl-mp-ebay');
     $MP_ebay_settings->register();
 }
 
