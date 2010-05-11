@@ -11,15 +11,9 @@
 if (class_exists('wpCSL_Settings') === false) {
     require_once(CJPLUGINDIR.'/WPCSL-generic/CSL-generic.php');
 }
-else {
-    die('Missing WPCSL-generic sub-module.');
-}
 
 if (function_exists('wpCSL_check_license_key') === false) {
     require_once(CJPLUGINDIR.'/WPCSL-license/CSL-license.php');
-}
-else {
-    die('Missing WPCSL-license sub-module.');
 }
 
 //// SETTINGS ////////////////////////////////////////////////////////
