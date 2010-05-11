@@ -27,7 +27,7 @@ $MP_ebay_settings = new wpCSL_Settings(
         'prefix'           => 'csl-mp-ebay',
         'name'             => 'Moneypress eBay Edition',
         'url'              => 'http://cybersprocket.com/products/moneypress-ebay/',
-        'paypal_button_id' => 'TEMP'
+        'paypal_button_id' => 'LJHLF4BHYMZMQ'
     )
 );
 
