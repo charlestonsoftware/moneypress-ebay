@@ -98,6 +98,15 @@ function MP_ebay_options_page() {
  * Processes our short code.
  */
 function MP_ebay_show_items($attributes, $content = null) {
+    global $current_user;
+    get_currentuserinfo();
+
+    if (($current_user->wp_capabilities['administrator']) === false &&
+        ($current_user->user_level === '10') === false &&
+        get_option('csl-mp-ebay-purchased') === false) {
+        return;
+    }
+
     extract(
         shortcode_atts(
             array(
