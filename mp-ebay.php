@@ -138,7 +138,7 @@ function MP_ebay_show_items($attributes, $content = null) {
  * argument to sprintf() in the MB_ebay_format_product() function just
  * below.  Eventually this will get factored out elsewhere.  Or that's
  * on the todo list anyways.  We'll see.  For all I know, a ravaging
- * yetti could attack the office and kill us all before we have a
+ * yeti could attack the office and kill us all before we have a
  * chance to get around to it.
  */
 $MB_ebay_product_template = '<div class="csl-ebay-product">
@@ -158,6 +158,7 @@ $MB_ebay_product_template = '<div class="csl-ebay-product">
       Purchase for %s
     </a>
   </p>
+  <div style="clear: both;"></div>
 </div>';
 
 /**
