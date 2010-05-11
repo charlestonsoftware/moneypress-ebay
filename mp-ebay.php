@@ -29,6 +29,7 @@
 /* along with this program. If not, see <http://www.gnu.org/licenses/>. */
 
 define('CJPLUGINDIR', plugin_dir_path(__FILE__));
+define('CJPLUGINURL', plugins_url('',__FILE__));
 
 require_once('include/config.php');
 require_once('Panhandler/Panhandler.php');
