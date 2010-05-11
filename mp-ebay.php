@@ -43,6 +43,8 @@ if (is_admin()) {
     add_action('admin_init', 'MP_ebay_register_settings');
 }
 
+add_filter('wp_print_styles', 'MP_ebay_user_css');
+
 /**
  * Add the [ebay_show_items] short code.  The code requires the
  * attribute 'keywords', which is a list of product keywords to search
@@ -51,6 +53,13 @@ if (is_admin()) {
 add_shortcode('ebay_show_items', 'MP_ebay_show_items');
 
 //// FUNCTIONS ///////////////////////////////////////////////////////
+
+/**
+ * Adds our user CSS to the page.
+ */
+function MP_ebay_user_css() {
+    wp_enqueue_style('mp_ebay_css', plugins_url('css/mp-ebay.css', __FILE__));
+}
 
 /**
  * Adds our plugin to the admin menu.
@@ -113,14 +122,47 @@ function MP_ebay_show_items($attributes, $content = null) {
 }
 
 /**
+ * This is our HTML template for display products, which we use as an
+ * argument to sprintf() in the MB_ebay_format_product() function just
+ * below.  Eventually this will get factored out elsewhere.  Or that's
+ * on the todo list anyways.  We'll see.  For all I know, a ravaging
+ * yetti could attack the office and kill us all before we have a
+ * chance to get around to it.
+ */
+$MB_ebay_product_template = '<div class="csl-ebay-product">
+  <!-- Product Name -->
+  <h3>%s</h3>
+  <div class="csl-ebay-product-image">
+    <!-- Image URL and Link -->
+    <a href="%s" target="_new">
+      <img src="%s" alt="%s"/>
+    </a>
+  </div>
+  <!-- Description -->
+  <p>%s</p>
+  <!-- Price and Purchase URL -->
+  <p>
+    <a href="%s" target="_new">
+      Purchase for %s
+    </a>
+  </p>
+</div>';
+
+/**
  * Takes an PanhandlerProduct object and returns a string of HTML
  * suitabale for displaying that product.
  */
 function MB_ebay_format_product($product) {
+    global $MB_ebay_product_template;
     return sprintf(
-        '<p><a href="%s">%s</a></p>',
+        $MB_ebay_product_template,
+        $product->name,
         $product->web_urls[0],
-        $product->name
+        $product->image_urls[0],
+        $product->name,
+        $product->description,
+        $product->web_urls[0],
+        money_format('$%i', $product->price)
     );
 }
 
