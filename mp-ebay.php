@@ -49,6 +49,10 @@ add_filter('wp_print_styles', 'MP_ebay_user_css');
  * Add the [ebay_show_items] short code.  The code requires the
  * attribute 'keywords', which is a list of product keywords to search
  * for.  The keywords should be separated by white-space.
+ *
+ * The shortcode optionally accepts an attribute 'products_to_show'
+ * which takes a number and controls how many products should be
+ * displayed on the page.
  */
 add_shortcode('ebay_show_items', 'MP_ebay_show_items');
 
@@ -96,21 +100,29 @@ function MP_ebay_options_page() {
 function MP_ebay_show_items($attributes, $content = null) {
     extract(
         shortcode_atts(
-            array('keywords' => ''),
+            array(
+                'keywords' => null,
+                'products_to_show' => null
+            ),
             $attributes
         )
     );
 
     // If we have no keywords then we just bail without showing any
     // content to the user.
-    if ($keywords === '') {
+    if ($keywords === null) {
         return;
     }
 
     $app_id = get_option('csl-mp-ebay-app-id');
     $ebay   = new eBayPanhandler($app_id);
 
-    $product_count = get_option('csl-mp-ebay-product-count');
+    if ($attributes['products_to_show']) {
+        $product_count = $attributes['products_to_show'];
+    }
+    else {
+        $product_count = get_option('csl-mp-ebay-product-count');
+    }
 
     if ($product_count) {
         $ebay->set_maximum_product_count($product_count);
