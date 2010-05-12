@@ -41,6 +41,7 @@ require_once('Panhandler/Drivers/eBay.php');
 if (is_admin()) {
     add_action('admin_menu', 'MP_ebay_admin_menu');
     add_action('admin_init', 'MP_ebay_register_settings');
+    add_action('admin_notices', array($MP_ebay_plugin->notifications, 'display'));
 }
 
 add_filter('wp_print_styles', 'MP_ebay_user_css');
@@ -69,6 +70,8 @@ function MP_ebay_user_css() {
  * Adds our plugin to the admin menu.
  */
 function MP_ebay_admin_menu() {
+    global $MP_ebay_plugin;
+
     add_options_page(
         'Moneypress eBay Options',
         'Moneypress eBay Edition',
