@@ -82,18 +82,16 @@ function MP_ebay_admin_menu() {
  * Adds our settings to the admin panel.
  */
 function MP_ebay_register_settings() {
-    global $MP_ebay_settings;
-    wpCSL_initialize_license_options('csl-mp-ebay');
-    wpCSL_check_product_key('csl-mp-ebay');
-    $MP_ebay_settings->register();
+    global $MP_ebay_plugin;
+    $MP_ebay_plugin->admin_init();
 }
 
 /**
- * Displays settings on the options page.
+ * Puts our options on the admin page.
  */
 function MP_ebay_options_page() {
-    global $MP_ebay_settings;
-    $MP_ebay_settings->render_settings_page();
+    global $MP_ebay_plugin;
+    $MP_ebay_plugin->settings->render_settings_page();
 }
 
 /**
