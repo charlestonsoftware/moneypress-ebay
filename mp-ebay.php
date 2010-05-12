@@ -35,15 +35,6 @@ require_once('include/config.php');
 require_once('Panhandler/Panhandler.php');
 require_once('Panhandler/Drivers/eBay.php');
 
-/**
- * Setup actions and filters.
- */
-if (is_admin()) {
-    add_action('admin_menu', 'MP_ebay_admin_menu');
-    add_action('admin_init', 'MP_ebay_register_settings');
-    add_action('admin_notices', array($MP_ebay_plugin->notifications, 'display'));
-}
-
 add_filter('wp_print_styles', 'MP_ebay_user_css');
 
 /**
@@ -64,37 +55,6 @@ add_shortcode('ebay_show_items', 'MP_ebay_show_items');
  */
 function MP_ebay_user_css() {
     wp_enqueue_style('mp_ebay_css', plugins_url('css/mp-ebay.css', __FILE__));
-}
-
-/**
- * Adds our plugin to the admin menu.
- */
-function MP_ebay_admin_menu() {
-    global $MP_ebay_plugin;
-
-    add_options_page(
-        'Moneypress eBay Options',
-        'Moneypress eBay Edition',
-        'administrator',
-        'cls-mp-ebay-options',
-        'MP_ebay_options_page'
-    );
-}
-
-/**
- * Adds our settings to the admin panel.
- */
-function MP_ebay_register_settings() {
-    global $MP_ebay_plugin;
-    $MP_ebay_plugin->admin_init();
-}
-
-/**
- * Puts our options on the admin page.
- */
-function MP_ebay_options_page() {
-    global $MP_ebay_plugin;
-    $MP_ebay_plugin->settings->render_settings_page();
 }
 
 /**
