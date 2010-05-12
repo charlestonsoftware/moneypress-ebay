@@ -1,6 +1,3 @@
-[submodule "WPCSL-license"]
-	path = WPCSL-license
-	url = ssh://git@cybersprocket.com/home/lobbrary/repos/modules/WPCSL-license.git
 [submodule "WPCSL-generic"]
 	path = WPCSL-generic
 	url = ssh://git@cybersprocket.com/home/lobbrary/repos/modules/WPCSL-generic.git
