@@ -12,6 +12,12 @@ Our Moneypress eBay plugin allows you to display products for sell on eBay based
 
 Our Moneypress eBay plugin allows you to display products for sell on eBay based on keywords you choose.  You can also control how many of those products you want to appear on your site.
 
+After installing the plugin (see below for instructions) you can show products on any page on your site by using the ‘[ebay_show_items]’ shortcode.  For example, entering the shortcode
+
+    [ebay_show_items keywords="cakes black bears"]
+
+would populate your site with a listing of products matching those keywords.  It’s quite likely that there is not a large intersection between delicious cakes and ferocious black bears, but you never know.  Fortunately you can put any keywords you like into the shortcode, to best suit your website.
+
 == Installation ==
 
  * Get the plugin from Cyber Sprocket Labs.
@@ -21,12 +27,6 @@ Our Moneypress eBay plugin allows you to display products for sell on eBay based
  * Browse to ‘Moneypress eBay Edition’ in your admin settings menu.
  * Enter your eBay App ID.
  * Additionally set the number of products you wish to show per page.  By default, ten products will be shown.
-
-== Upgrade Notice ==
-
-== Screenshots ==
-
-Coming soon!
 
 == Frequently Asked Questions ==
 
