@@ -22,3 +22,6 @@
     max-height: 120px;
 }
 
+.csl-ebay-product li {
+    list-style: none;
+}
