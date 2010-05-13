@@ -118,7 +118,7 @@ function MP_ebay_show_items($attributes, $content = null) {
  */
 $MB_ebay_product_template = '<div class="csl-ebay-product">
   <!-- Product Name -->
-  <h3>%s</h3>
+  <h3><a href="%s">%s</a></h3>
   <div class="csl-ebay-product-image">
     <!-- Image URL and Link -->
     <a href="%s" target="_new">
@@ -144,6 +144,7 @@ function MB_ebay_format_product($product) {
     global $MB_ebay_product_template;
     return sprintf(
         $MB_ebay_product_template,
+        $product->web_urls[0],
         $product->name,
         $product->web_urls[0],
         $product->image_urls[0],
