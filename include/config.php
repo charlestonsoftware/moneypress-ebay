@@ -28,6 +28,22 @@ $MP_ebay_plugin = new wpCSL_plugin(
 
 $MP_ebay_plugin->settings->add_section(
     array(
+        'name' => 'How to Use',
+        'description' =>
+        '<p>To use the Moneypress eBay plugin you only need to add a simple '                   .
+        'shortcode to any page where you want to show eBay products.  An example '              .
+        'of the shortcode is <code>[ebay_show_items keywords="kitchen furniture"]</code>. '     .
+        'Putting this code on a page would show ten products from eBay matching those '         .
+        'keywords, along with links to each item and their current price.  If you want '        .
+        'to change how many products are shown, you can either change the default value below ' .
+        'or you can change it in the shortcode itself, e.g. <code>[ebay_show_items '            .
+        'keywords="kitchen furniture" products_to_show=5]</code>, which would only show '       .
+        'five items.</p>'
+    )
+);
+
+$MP_ebay_plugin->settings->add_section(
+    array(
         'name'        => 'Primary Settings',
         'description' => '<p>You will need an <a href="https://developer.ebay.com/join/Default.aspx" target="_new">eBay developer account</a> to fill in these fields.</p>'
     )
