@@ -53,6 +53,11 @@ $MP_ebay_plugin->settings->add_item('Primary Settings', 'eBay App ID', 'csl-mp-e
                            'Your eBay developer App ID.  You must enter this before the plugin is able to fetch products. ' .
                            'If you do not have one then <a href="https://developer.ebay.com/join/Default.aspx" target="_new">you can sign-up</a> ' .
                            'for a such an account at eBay.');
+
+$MP_ebay_plugin->settings->add_item('Primary Settings', 'eBay Seller ID', 'csl-mp-ebay-seller-id', 'text', false,
+                                  'Your eBay seller ID.  If provided, the plugin will only shows products from you, ' .
+                                  'or from whichever seller whose ID you enter.');
+
 $MP_ebay_plugin->settings->add_item('Primary Settings', 'Number of Products', 'csl-mp-ebay-product-count', 'text', false,
                            'The number of products to show on your site.');
 
