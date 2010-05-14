@@ -7,7 +7,7 @@
  * installed, and if not then we load it.
  */
 if (class_exists('wpCSL_plugin') === false) {
-    require_once(CJPLUGINDIR.'WPCSL-generic/CSL-plugin.php');
+    require_once(MP_EBAY_PLUGINDIR.'WPCSL-generic/CSL-plugin.php');
 }
 
 //// SETTINGS ////////////////////////////////////////////////////////

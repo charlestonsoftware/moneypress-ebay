@@ -28,8 +28,13 @@
 /* You should have received a copy of the GNU General Public License    */
 /* along with this program. If not, see <http://www.gnu.org/licenses/>. */
 
-define('CJPLUGINDIR', plugin_dir_path(__FILE__));
-define('CJPLUGINURL', plugins_url('',__FILE__));
+if (defined('MP_EBAY_PLUGINDIR') === false) {
+    define('MP_EBAY_PLUGINDIR', plugin_dir_path(__FILE__));
+}
+
+if (defined('MP_EBAY_PLUGINURL') === false) {
+    define('MP_EBAY_PLUGINURL', plugins_url('',__FILE__));
+}
 
 require_once('include/config.php');
 
