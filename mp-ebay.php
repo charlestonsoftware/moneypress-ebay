@@ -85,6 +85,9 @@ function MP_ebay_show_items($attributes, $content = null) {
         return;
     }
 
+    $ebay = new eBayPanhandler($ebay_app_id);
+    $seller_id = get_option('csl-mp-ebay-seller-id');
+
     extract(
         shortcode_atts(
             array(
@@ -95,38 +98,44 @@ function MP_ebay_show_items($attributes, $content = null) {
         )
     );
 
-    // If we have no keywords then we just bail without showing any
-    // content to the user.
-    if ($keywords === null) {
-        return;
-    }
-
-    $ebay = new eBayPanhandler($ebay_app_id);
-
+    // See if we are setting a limit on how many items to show.
     if (isset($attributes['products_to_show'])) {
-        $product_count = $attributes['products_to_show'];
+        $product_count = (integer) $attributes['products_to_show'];
     }
     else {
-        $product_count = get_option('csl-mp-ebay-product-count');
+        $product_count = (integer) get_option('csl-mp-ebay-product-count');
     }
 
+    // Even after the above two checks for places to get a product count, we may
+    // still end up with a count of zero.  So we still have to make sure
+    // $product_count is non-zero before calling set_maximum_product_count(),
+    // otherwise we will display nothing.
     if ($product_count) {
         $ebay->set_maximum_product_count($product_count);
     }
 
-    $seller_id = get_option('csl-mp-ebay-seller-id');
-
-    if ($seller_id) {
-        $products = $ebay->get_products_by_keywords(
-            array($keywords),
-            array('sellers' => array($seller_id))
+    // If we have no keywords then we show everything associated
+    // with the seller ID from the options.
+    if ($keywords === null) {
+        return MP_ebay_format_all_products(
+            $ebay->get_products_from_vendor($seller_id)
         );
     }
     else {
-        $products = $ebay->get_products_by_keywords(array($keywords));
-    }
+        // Even if we are searching by keywords, we may still be restricting
+        // our search to a specific vendor.
+        if ($seller_id) {
+            $products = $ebay->get_products_by_keywords(
+                array($keywords),
+                array('sellers' => array($seller_id))
+            );
+        }
+        else {
+            $products = $ebay->get_products_by_keywords(array($keywords));
+        }
 
-    return MP_ebay_format_all_products($products);
+        return MP_ebay_format_all_products($products);
+    }
 }
 
 /**
