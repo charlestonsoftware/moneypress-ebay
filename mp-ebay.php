@@ -51,7 +51,7 @@ add_filter('wp_print_styles', 'MP_ebay_user_css');
  * attribute 'keywords', which is a list of product keywords to search
  * for.  The keywords should be separated by white-space.
  *
- * The shortcode optionally accepts an attribute 'products_to_show'
+ * The shortcode optionally accepts an attribute 'number_of_products'
  * which takes a number and controls how many products should be
  * displayed on the page.
  */
@@ -92,15 +92,15 @@ function MP_ebay_show_items($attributes, $content = null) {
         shortcode_atts(
             array(
                 'keywords' => null,
-                'products_to_show' => null
+                'number_of_products' => null
             ),
             $attributes
         )
     );
 
     // See if we are setting a limit on how many items to show.
-    if (isset($attributes['products_to_show'])) {
-        $product_count = (integer) $attributes['products_to_show'];
+    if (isset($attributes['number_of_products'])) {
+        $product_count = (integer) $attributes['number_of_products'];
     }
     else {
         $product_count = (integer) get_option('csl-mp-ebay-product-count');

@@ -37,7 +37,7 @@ $MP_ebay_plugin->settings->add_section(
         'keywords, along with links to each item and their current price.  If you want '        .
         'to change how many products are shown, you can either change the default value below ' .
         'or you can change it in the shortcode itself, e.g. <code>[ebay_show_items '            .
-        'keywords="kitchen furniture" products_to_show=5]</code>, which would only show '       .
+        'keywords="kitchen furniture" number_of_products=5]</code>, which would only show '       .
         'five items.</p>'
     )
 );
