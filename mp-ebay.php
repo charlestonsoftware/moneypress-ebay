@@ -73,6 +73,9 @@ function MP_ebay_show_items($attributes, $content = null) {
     global $current_user;
     get_currentuserinfo();
 
+    // The key we use for making API requests.
+    $ebay_app_id = "CyberSpr-e973-4a45-ad8b-430a8ee3b190";
+
     // Make sure the user is either an admin, in which case he
     // gets to view the results of the plugin, or otherwise
     // make sure the license has been purchased.
@@ -98,7 +101,7 @@ function MP_ebay_show_items($attributes, $content = null) {
         return;
     }
 
-    $ebay = new eBayPanhandler("CyberSpr-e973-4a45-ad8b-430a8ee3b190");
+    $ebay = new eBayPanhandler($ebay_app_id);
 
     if (isset($attributes['products_to_show'])) {
         $product_count = $attributes['products_to_show'];
@@ -111,9 +114,19 @@ function MP_ebay_show_items($attributes, $content = null) {
         $ebay->set_maximum_product_count($product_count);
     }
 
-    return MP_ebay_format_all_products(
-        $ebay->get_products_by_keywords(array($keywords))
-    );
+    $seller_id = get_option('csl-mp-ebay-seller-id');
+
+    if ($seller_id) {
+        $products = $ebay->get_products_by_keywords(
+            array($keywords),
+            array('sellers' => array($seller_id))
+        );
+    }
+    else {
+        $products = $ebay->get_products_by_keywords(array($keywords));
+    }
+
+    return MP_ebay_format_all_products($products);
 }
 
 /**
