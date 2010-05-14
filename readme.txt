@@ -18,6 +18,12 @@ After installing the plugin (see below for instructions) you can show products o
 
 would populate your site with a listing of products matching those keywords.  It’s quite likely that there is not a large intersection between delicious cakes and ferocious black bears, but you never know.  Fortunately you can put any keywords you like into the shortcode, to best suit your website.
 
+If you are a merchant on eBay then you can enter your seller ID to list only your own products.  Or you could put it anyone’s seller ID, if you want to list their products.  If you have entered a seller ID then you do not have to provide any keywords.  For example, you could just write
+
+    [ebay_show_items]
+
+on one of your pages to list everything you are selling on eBay.
+
 == Installation ==
 
  * Get the plugin from Cyber Sprocket Labs.
@@ -25,12 +31,9 @@ would populate your site with a listing of products matching those keywords.  It
  * Get your App ID from eBay.
  * Install the plugin using the Zip file.
  * Browse to ‘Moneypress eBay Edition’ in your admin settings menu.
- * Enter your eBay App ID.
- * Additionally set the number of products you wish to show per page.  By default, ten products will be shown.
-
-== Frequently Asked Questions ==
-
-Please direct all questions to: info@cybersprocket.com
+ * (Optional) Enter your seller ID if you want to list only your own products.
+ * (Optional) Set the number of products you wish to show per page.  By default, ten products will be shown.
+ * Enter the ‘[ebay_show_items keywords=”…”]’ on any page you want to list products.
 
 == Changelog ==
 
