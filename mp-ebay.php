@@ -34,8 +34,14 @@ define('CJPLUGINURL', plugins_url('',__FILE__));
 require_once('include/config.php');
 
 if (class_exists('eBayPanhandler') === false) {
-    require_once('Panhandler/Panhandler.php');
-    require_once('Panhandler/Drivers/eBay.php');
+    try {
+        require_once('Panhandler/Panhandler.php');
+        require_once('Panhandler/Drivers/eBay.php');
+    }
+    catch (PanhandlerMissingRequirement $exception) {
+        add_action('admin_notices', array($exception, 'getMessage'));
+        exit(1);
+    }
 }
 
 add_filter('wp_print_styles', 'MP_ebay_user_css');
