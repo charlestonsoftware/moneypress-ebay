@@ -98,8 +98,7 @@ function MP_ebay_show_items($attributes, $content = null) {
         return;
     }
 
-    $app_id = get_option('csl-mp-ebay-app-id');
-    $ebay   = new eBayPanhandler($app_id);
+    $ebay = new eBayPanhandler("CyberSpr-e973-4a45-ad8b-430a8ee3b190");
 
     if ($attributes['products_to_show']) {
         $product_count = $attributes['products_to_show'];
