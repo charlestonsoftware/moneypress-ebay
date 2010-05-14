@@ -18,11 +18,15 @@ if (class_exists('wpCSL_plugin') === false) {
 
 $MP_ebay_plugin = new wpCSL_plugin(
     array(
-        'self'             => 'MP_ebay_plugin',
-        'prefix'           => 'csl-mp-ebay',
-        'name'             => 'Moneypress eBay Edition',
-        'url'              => 'http://cybersprocket.com/products/moneypress-ebay/',
-        'paypal_button_id' => 'LJHLF4BHYMZMQ'
+        'prefix'                 => 'csl-mp-ebay',
+        'name'                   => 'Moneypress eBay Edition',
+        'url'                    => 'http://cybersprocket.com/products/moneypress-ebay/',
+        'paypal_button_id'       => 'LJHLF4BHYMZMQ',
+        'cache_path'             => MP_EBAY_PLUGINDIR,
+        'plugin_url'             => MP_EBAY_PLUGINDIR,
+        'notifications_obj_name' => 'default',
+        'settings_obj_name'      => 'default',
+        'license_obj_name'       => 'default'
     )
 );
 
