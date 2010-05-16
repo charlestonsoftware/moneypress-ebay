@@ -64,4 +64,17 @@ $MP_ebay_plugin->settings->add_item('Primary Settings', 'eBay Seller ID', 'csl-m
 $MP_ebay_plugin->settings->add_item('Primary Settings', 'Number of Products', 'csl-mp-ebay-product-count', 'text', false,
                            'The number of products to show on your site.');
 
+$MP_ebay_plugin->settings->add_section(
+    array(
+        'name'        => 'Affiliate Settings',
+        'description' =>
+        '<p>Here you can provide your affiliate information, which will automatically be ' .
+        'put into the links of for the products displayed on the site.</p>'
+    )
+);
+
+$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'csl-my-ebay-tracking-id', 'text', false,
+                                  'The tracking ID provided to your by your tracking partner.  For some services ' .
+                                  'this may be called your campaign ID or affiliate ID.');
+
 ?>
