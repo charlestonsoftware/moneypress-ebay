@@ -73,7 +73,7 @@ $MP_ebay_plugin->settings->add_section(
     )
 );
 
-$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'csl-my-ebay-tracking-id', 'text', false,
+$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'csl-mp-ebay-tracking-id', 'text', false,
                                   'The tracking ID provided to your by your tracking partner.  For some services ' .
                                   'this may be called your campaign ID or affiliate ID.');
 
