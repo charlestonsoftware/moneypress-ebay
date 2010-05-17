@@ -146,14 +146,16 @@ function MP_ebay_get_general_options() {
     $general_options = array();
     $seller_id       = get_option('csl-mp-ebay-seller-id');
     $tracking_id     = get_option('csl-mp-ebay-tracking-id');
+    $network_id      = get_option('csl-mp-ebay-network-id');
 
     if ($seller_id) {
         $general_options['sellers'] = array($seller_id);
     }
 
-    if ($tracking_id) {
+    if ($tracking_id && $network_id) {
         $general_options['affiliate_info'] = array(
-            'tracking_id' => $tracking_id
+            'tracking_id' => $tracking_id,
+            'network_id'  => $network_id
         );
     }
 

@@ -77,4 +77,19 @@ $MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'csl-my
                                   'The tracking ID provided to your by your tracking partner.  For some services ' .
                                   'this may be called your campaign ID or affiliate ID.');
 
+$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Network ID', 'csl-mp-ebay-network-id', 'list', false,
+                                  'Specificies your tracking parnter for affiliate commissions.  This field is ' .
+                                  'required if you provide a tracking ID.',
+                                  array(
+                                      'Be Free'              => 2,
+                                      'Affilinet'            => 3,
+                                      'TradeDoubler'         => 4,
+                                      'Mediaplex'            => 5,
+                                      'DoubleClick'          => 6,
+                                      'Allyes'               => 7,
+                                      'BJMT'                 => 8,
+                                      'eBay Partner Network' => 9,
+                                  )
+    );
+
 ?>
