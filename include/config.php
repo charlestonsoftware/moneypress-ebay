@@ -73,23 +73,26 @@ $MP_ebay_plugin->settings->add_section(
     )
 );
 
-$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'csl-mp-ebay-tracking-id', 'text', false,
-                                  'The tracking ID provided to your by your tracking partner.  For some services ' .
-                                  'this may be called your campaign ID or affiliate ID.');
-
 $MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Network ID', 'csl-mp-ebay-network-id', 'list', false,
-                                  'Specificies your tracking parnter for affiliate commissions.  This field is ' .
-                                  'required if you provide a tracking ID.',
+                                  '<p>Specificies your tracking parnter for affiliate commissions.  This field is ' .
+                                  'required if you provide a tracking ID.  For example, if you sign up at the ' .
+                                  '<a href="https://www.ebaypartnernetwork.com/files/hub/en-US/index.html">eBay ' .
+                                  'Partner Network</a> you will receive a confirmation email in a few days with ' .
+                                  'tracking ID.',
                                   array(
+                                      'eBay Partner Network' => 9,
                                       'Be Free'              => 2,
                                       'Affilinet'            => 3,
                                       'TradeDoubler'         => 4,
                                       'Mediaplex'            => 5,
                                       'DoubleClick'          => 6,
                                       'Allyes'               => 7,
-                                      'BJMT'                 => 8,
-                                      'eBay Partner Network' => 9,
+                                      'BJMT'                 => 8
                                   )
     );
+
+$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'csl-mp-ebay-tracking-id', 'text', false,
+                                  'The tracking ID provided to your by your tracking partner.  For some services ' .
+                                  'this may be called your campaign ID or affiliate ID.');
 
 ?>
