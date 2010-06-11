@@ -196,6 +196,11 @@ $MB_ebay_product_template = '<div class="csl-ebay-product">
  */
 function MB_ebay_format_product($product) {
     global $MB_ebay_product_template;
+
+    if ($product->image_urls[0] === null) {
+        $product->image_urls[0] = MP_EBAY_PLUGINURL.'/images/ImageNA.png';
+    }
+
     return sprintf(
         $MB_ebay_product_template,
         $product->web_urls[0],
