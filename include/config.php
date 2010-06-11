@@ -64,6 +64,21 @@ $MP_ebay_plugin->settings->add_item('Primary Settings', 'eBay Seller ID', 'csl-m
 $MP_ebay_plugin->settings->add_item('Primary Settings', 'Number of Products', 'csl-mp-ebay-product-count', 'text', false,
                            'The number of products to show on your site.');
 
+$MP_ebay_plugin->settings->add_item('Primary Settings',
+                                  'Sort Items by Price',
+                                  'csl-mp-ebay-sort-order',
+                                  'list',
+                                  false,
+                                  '<p>Determines whether products are listed in order of most expensive ' .
+                                  'or least expensive.  Note that the shipping cost is included in the ' .
+                                  'total for the purposes of sorting.</p>',
+                                  array(
+                                      'No Sorting'    => 'no-sorting',
+                                      'Lowest First'  => 'PricePlusShippingLowest',
+                                      'Highest First' => 'PricePlusShippingHighest'
+                                      )
+    );
+
 $MP_ebay_plugin->settings->add_section(
     array(
         'name'        => 'Affiliate Settings',

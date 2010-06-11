@@ -142,6 +142,7 @@ function MP_ebay_get_general_options() {
     $seller_id       = get_option('csl-mp-ebay-seller-id');
     $tracking_id     = get_option('csl-mp-ebay-tracking-id');
     $network_id      = get_option('csl-mp-ebay-network-id');
+    $sort_order      = get_option('csl-mp-ebay-sort-order');
 
     if ($seller_id) {
         $general_options['sellers'] = array($seller_id);
@@ -152,6 +153,10 @@ function MP_ebay_get_general_options() {
             'tracking_id' => $tracking_id,
             'network_id'  => $network_id
         );
+    }
+
+    if ($sort_order && $sort_order !== 'no-sorting') {
+        $general_options['sort_order'] = $sort_order;
     }
 
     return $general_options;

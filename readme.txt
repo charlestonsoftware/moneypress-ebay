@@ -42,6 +42,9 @@ Please direct all inquiries to: info@cybersprocket.com
 
 == Changelog ==
 
+= v1.2 =
+* Allow users to sort products by price.
+
 = v1.1 (May 17th 2010) =
 * Added support for affiliate networking.
 
