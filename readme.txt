@@ -5,7 +5,7 @@ Donate Link: http://www.cybersprocket.com/products/moneypress-ebay/
 Tags: plugin,post,page,ebay,affiliate,store
 Requires at least: 2.6
 Tested up to: 2.9.2
-Stable tag: 1.1
+Stable tag: 1.2
 
 Our MoneyPress eBay plugin allows you to display products for sell on eBay based on keywords you choose.
 
