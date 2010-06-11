@@ -1,4 +1,5 @@
 === MoneyPress : eBay Edition ===
+Plugin Name: MoneyPress : eBay Edition
 Contributors: cybersprocket
 Donate Link: http://www.cybersprocket.com/products/moneypress-ebay/
 Tags: plugin,post,page,ebay,affiliate,store
