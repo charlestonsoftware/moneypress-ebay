@@ -1,4 +1,4 @@
-=== Moneypress eBay Edition ===
+=== MoneyPress : eBay Edition ===
 Contributors: cybersprocket
 Donate Link: http://www.cybersprocket.com/products/moneypress-ebay/
 Tags: plugin,post,page,ebay,affiliate,store
@@ -6,11 +6,11 @@ Requires at least: 2.6
 Tested up to: 2.9.2
 Stable tag: 1.1
 
-Our Moneypress eBay plugin allows you to display products for sell on eBay based on keywords you choose.
+Our MoneyPress eBay plugin allows you to display products for sell on eBay based on keywords you choose.
 
 == Description ==
 
-Our Moneypress eBay plugin allows you to display products for sell on eBay based on keywords you choose.  You can also control how many of those products you want to appear on your site.
+Our MoneyPress eBay plugin allows you to display products for sell on eBay based on keywords you choose.  You can also control how many of those products you want to appear on your site.
 
 After installing the plugin (see below for instructions) you can show products on any page on your site by using the ‘[ebay_show_items]’ shortcode.  For example, entering the shortcode
 
@@ -28,7 +28,7 @@ on one of your pages to list everything you are selling on eBay.
 
  * Get the plugin from Cyber Sprocket Labs.
  * Install the plugin using the Zip file.
- * Browse to ‘Moneypress eBay Edition’ in your admin settings menu.
+ * Browse to ‘MoneyPress : eBay Edition’ in your admin settings menu.
  * (Optional) Enter your seller ID if you want to list only your own products.
  * (Optional) Set the number of products you wish to show per page.  By default, ten products will be shown.
  * (Optional) Enter your affiliate information.  For example, see the description for the ‘Network ID’ on how to sign up as an eBay affiliate.
