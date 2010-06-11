@@ -10,7 +10,9 @@ Our MoneyPress eBay plugin allows you to display products for sell on eBay based
 
 == Description ==
 
-Our MoneyPress eBay plugin allows you to display products for sell on eBay based on keywords you choose.  You can also control how many of those products you want to appear on your site.
+Our MoneyPress : eBay Edition plugin allows you to easily display products from eBay based on keywords you provide. It makes it simple to show product listings for anything relevant to your site. All product entries also come with images, current asking prices, and links to eBay to get further information about the product.
+
+List your own products by entering your seller ID, or sell any product on eBay and earn a commission with your eBay Partner ID or other approved affiliate program ID. If you are an eBay seller or an approved eBay affiliate this plugin will help boost the income earning potential of your site in just a few easy steps.
 
 After installing the plugin (see below for instructions) you can show products on any page on your site by using the ‘[ebay_show_items]’ shortcode.  For example, entering the shortcode
 
