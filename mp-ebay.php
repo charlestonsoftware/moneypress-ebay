@@ -120,16 +120,11 @@ function MP_ebay_show_items($attributes, $content = null) {
 
     $general_options = MP_ebay_get_general_options();
 
-    // If we have no keywords then we show everything associated
-    // with the seller ID from the options.
-    if ($keywords === null) {
-        $products = $ebay->get_products_from_vendor($seller_id, $general_options);
-    }
-    else {
-        $products = $ebay->get_products_by_keywords(array($keywords), $general_options);
+    if ($keywords !== null) {
+        $general_options['keywords'] = array($keywords);
     }
 
-    return MP_ebay_format_all_products($products);
+    return MP_ebay_format_all_products( $ebay->get_products($general_options) );
 }
 
 /**
