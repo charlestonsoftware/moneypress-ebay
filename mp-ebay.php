@@ -1,15 +1,15 @@
 <?php
 /*
-  Plugin Name: Moneypress eBay Edition
+  Plugin Name: MoneyPress : eBay Edition
   Plugin URI: http://www.cybersprocket.com/products/moneypress-ebay/
-  Description: Our Moneypress eBay plugin allows you to display products from eBay on your web site.
+  Description: Our MoneyPress eBay plugin allows you to display products from eBay on your web site.
   Version: 1.1
   Author: Cyber Sprocket Labs
   Author URI: http://www.cybersprocket.com
   License: GPL3
 */
 
-/* mp-ebay.php --- Moneypress eBay Edition                              */
+/* mp-ebay.php --- MoneyPress : eBay Edition                              */
 
 /* Copyright (C) 2010 Cyber Sprocket Labs <info@cybersprocket.com>      */
 

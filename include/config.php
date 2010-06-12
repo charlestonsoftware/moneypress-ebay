@@ -19,7 +19,7 @@ if (class_exists('wpCSL_plugin') === false) {
 $MP_ebay_plugin = new wpCSL_plugin(
     array(
         'prefix'                 => 'csl-mp-ebay',
-        'name'                   => 'Moneypress eBay Edition',
+        'name'                   => 'MoneyPress eBay : Edition',
         'url'                    => 'http://cybersprocket.com/products/moneypress-ebay/',
         'paypal_button_id'       => 'LJHLF4BHYMZMQ',
         'cache_path'             => MP_EBAY_PLUGINDIR,
@@ -34,7 +34,7 @@ $MP_ebay_plugin->settings->add_section(
     array(
         'name' => 'How to Use',
         'description' =>
-        '<p>To use the Moneypress eBay plugin you only need to add a simple '                   .
+        '<p>To use the MoneyPress eBay plugin you only need to add a simple '                   .
         'shortcode to any page where you want to show eBay products.  An example '              .
         'of the shortcode is <code>[ebay_show_items keywords="kitchen furniture"]</code>. '     .
         'Putting this code on a page would show ten products from eBay matching those '         .
