@@ -71,7 +71,7 @@ $MP_ebay_plugin->settings->add_item('Primary Settings',
                                   false,
                                   '<p>Determines whether products are listed in order of most expensive ' .
                                   'or least expensive.  Note that the shipping cost is included in the ' .
-                                  'total for the purposes of sorting.',
+                                  'total for the purposes of sorting.</p>',
                                   array(
                                       'No Sorting'    => 'no-sorting',
                                       'Lowest First'  => 'PricePlusShippingLowest',
