@@ -29,6 +29,8 @@ on one of your pages to list everything you are selling on eBay.
 
 == Installation ==
 
+Requirements: PHP 5.2 or later with support for cURL and SimpleXML.
+
  * Get the plugin from Cyber Sprocket Labs.
  * Install the plugin using the Zip file.
  * Browse to ‘MoneyPress : eBay Edition’ in your admin settings menu.
