@@ -38,16 +38,7 @@ if (defined('MP_EBAY_PLUGINURL') === false) {
 
 require_once('include/config.php');
 
-add_filter('wp_print_styles', 'MP_ebay_user_css');
-
 //// FUNCTIONS ///////////////////////////////////////////////////////
-
-/**
- * Adds our user CSS to the page.
- */
-function MP_ebay_user_css() {
-    wp_enqueue_style('mp_ebay_css', plugins_url('css/mp-ebay.css', __FILE__));
-}
 
 /**
  * Processes our short code.
