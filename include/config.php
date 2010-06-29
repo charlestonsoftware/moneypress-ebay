@@ -24,6 +24,7 @@ $MP_ebay_plugin = new wpCSL_plugin(
         'paypal_button_id'       => 'LJHLF4BHYMZMQ',
         'cache_path'             => MP_EBAY_PLUGINDIR,
         'plugin_url'             => MP_EBAY_PLUGINURL,
+        'plugin_path'            => MP_EBAY_PLUGINDIR,
         'notifications_obj_name' => 'default',
         'settings_obj_name'      => 'default',
         'license_obj_name'       => 'default',
