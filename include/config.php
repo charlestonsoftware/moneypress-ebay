@@ -57,16 +57,16 @@ $MP_ebay_plugin->settings->add_section(
     )
 );
 
-$MP_ebay_plugin->settings->add_item('Primary Settings', 'eBay Seller ID', 'csl-mp-ebay-seller-id', 'text', false,
+$MP_ebay_plugin->settings->add_item('Primary Settings', 'eBay Seller ID', 'seller-id', 'text', false,
                                   'Your eBay seller ID.  If provided, the plugin will only shows products from you, ' .
                                   'or from whichever seller whose ID you enter.');
 
-$MP_ebay_plugin->settings->add_item('Primary Settings', 'Number of Products', 'csl-mp-ebay-product-count', 'text', false,
+$MP_ebay_plugin->settings->add_item('Primary Settings', 'Number of Products', 'product-count', 'text', false,
                            'The number of products to show on your site.');
 
 $MP_ebay_plugin->settings->add_item('Primary Settings',
                                   'Sort Items by Price',
-                                  'csl-mp-ebay-sort-order',
+                                  'sort-order',
                                   'list',
                                   false,
                                   '<p>Determines whether products are listed in order of most expensive ' .
@@ -88,7 +88,7 @@ $MP_ebay_plugin->settings->add_section(
     )
 );
 
-$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Network ID', 'csl-mp-ebay-network-id', 'list', false,
+$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Network ID', 'network-id', 'list', false,
                                   '<p>Specificies your tracking parnter for affiliate commissions.  This field is ' .
                                   'required if you provide a tracking ID.  For example, if you sign up at the ' .
                                   '<a href="https://www.ebaypartnernetwork.com/files/hub/en-US/index.html">eBay ' .
@@ -106,7 +106,7 @@ $MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Network ID', 'csl-mp-
                                   )
     );
 
-$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'csl-mp-ebay-tracking-id', 'text', false,
+$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'tracking-id', 'text', false,
                                   'The tracking ID provided to your by your tracking partner.  For some services ' .
                                   'this may be called your campaign ID or affiliate ID.');
 
