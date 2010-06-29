@@ -40,17 +40,6 @@ require_once('include/config.php');
 
 add_filter('wp_print_styles', 'MP_ebay_user_css');
 
-/**
- * Add the [ebay_show_items] short code.  The code requires the
- * attribute 'keywords', which is a list of product keywords to search
- * for.  The keywords should be separated by white-space.
- *
- * The shortcode optionally accepts an attribute 'number_of_products'
- * which takes a number and controls how many products should be
- * displayed on the page.
- */
-add_shortcode('ebay_show_items', 'MP_ebay_show_items');
-
 //// FUNCTIONS ///////////////////////////////////////////////////////
 
 /**
