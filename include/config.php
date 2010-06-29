@@ -28,7 +28,7 @@ $MP_ebay_plugin = new wpCSL_plugin(
         'notifications_obj_name' => 'default',
         'settings_obj_name'      => 'default',
         'license_obj_name'       => 'default',
-        'shortcodes'             => 'ebay_show_items',
+        'shortcodes'             => array('ebay_show_items'),
         'driver_name'            => 'eBay',
         'driver_args'            => array(
             "CyberSpr-e973-4a45-ad8b-430a8ee3b190"
