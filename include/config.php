@@ -26,7 +26,8 @@ $MP_ebay_plugin = new wpCSL_plugin(
         'plugin_url'             => MP_EBAY_PLUGINURL,
         'notifications_obj_name' => 'default',
         'settings_obj_name'      => 'default',
-        'license_obj_name'       => 'default'
+        'license_obj_name'       => 'default',
+        'shortcodes'             => 'ebay_show_items'
     )
 );
 
