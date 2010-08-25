@@ -19,7 +19,7 @@ if (class_exists('wpCSL_plugin') === false) {
 $MP_ebay_plugin = new wpCSL_plugin(
     array(
         'prefix'                 => 'csl-mp-ebay',
-        'name'                   => 'MoneyPress eBay : Edition',
+        'name'                   => 'MoneyPress : eBay Edition',
         'url'                    => 'http://cybersprocket.com/products/moneypress-ebay/',
         'paypal_button_id'       => 'LJHLF4BHYMZMQ',
         'cache_path'             => MP_EBAY_PLUGINDIR,

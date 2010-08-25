@@ -36,6 +36,10 @@ if (defined('MP_EBAY_PLUGINURL') === false) {
     define('MP_EBAY_PLUGINURL', plugins_url('',__FILE__));
 }
 
+if (defined('MP_EBAY_BASENAME') === false) {
+    define('MP_EBAY_BASENAME', plugin_basename(__FILE__));
+}
+
 require_once('include/config.php');
 
 ?>
