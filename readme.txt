@@ -5,7 +5,7 @@ Donate Link: http://www.cybersprocket.com/products/moneypress-ebay/
 Tags: plugin,post,page,ebay,affiliate,store
 Requires at least: 2.6
 Tested up to: 2.9.2
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 
 Our MoneyPress eBay plugin allows you to display products for sell on eBay based on keywords you choose.
 
@@ -38,6 +38,7 @@ Requirements: PHP 5.2 or later with support for cURL and SimpleXML.
  * (Optional) Set the number of products you wish to show per page.  By default, ten products will be shown.
  * (Optional) Enter your affiliate information.  For example, see the description for the ‘Network ID’ on how to sign up as an eBay affiliate.
  * Enter the ‘[ebay_show_items keywords=”…”]’ on any page you want to list products.
+ * You can also use categoryId as a way to filter your products (Ex. [ebay_show_items keywords="" categoryId=""]). You can find a list of current categories and their corresponding ID numbers at http://pages.ebay.com/sellerinformation/growing/categorychanges.html
 
 == Frequently Asked Questions ==
 
@@ -46,6 +47,11 @@ See the knowledgebase at http://redmine.cybersprocket.com/projects/mpress-ebay/w
 Please direct all inquiries to: info@cybersprocket.com
 
 == Changelog ==
+
+= v1.2.2 (August 26 2010) =
+* Added support for filtering products by category ID
+* Changed the title
+* Added additional options in navigation on plugin page
 
 = v1.2.1 (June 14th 2010) =
 * Add missing image from v1.2 release.
