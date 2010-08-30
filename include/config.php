@@ -63,7 +63,7 @@ $MP_ebay_plugin->settings->add_section(
     )
 );
 
-$MP_ebay_plugin->settings->add_item('Primary Settings', 'eBay Seller ID', 'seller-id', 'text', false,
+$MP_ebay_plugin->settings->add_item('Primary Settings', 'eBay Seller ID', 'sellers', 'text', false,
                                   'Your eBay seller ID.  If provided, the plugin will only shows products from you, ' .
                                   'or from whichever seller whose ID you enter.');
 
@@ -72,7 +72,7 @@ $MP_ebay_plugin->settings->add_item('Primary Settings', 'Number of Products', 'p
 
 $MP_ebay_plugin->settings->add_item('Primary Settings',
                                   'Sort Items by Price',
-                                  'sort-order',
+                                  'sort_order',
                                   'list',
                                   false,
                                   '<p>Determines whether products are listed in order of most expensive ' .
@@ -94,7 +94,7 @@ $MP_ebay_plugin->settings->add_section(
     )
 );
 
-$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Network ID', 'network-id', 'list', false,
+$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Network ID', 'affiliate_info=>network_id', 'list', false,
                                   '<p>Specificies your tracking parnter for affiliate commissions.  This field is ' .
                                   'required if you provide a tracking ID.  For example, if you sign up at the ' .
                                   '<a href="https://www.ebaypartnernetwork.com/files/hub/en-US/index.html">eBay ' .
@@ -112,7 +112,7 @@ $MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Network ID', 'network
                                   )
     );
 
-$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'tracking-id', 'text', false,
+$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'affiliate_info=>tracking_id', 'text', false,
                                   'The tracking ID provided to your by your tracking partner.  For some services ' .
                                   'this may be called your campaign ID or affiliate ID.');
 
