@@ -105,7 +105,8 @@ $MP_ebay_plugin->settings->add_section(
     )
 );
 
-$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Network ID', 'network_id', 'list', false,
+$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Network ID', 
+                                    'affiliate_info=>network_id', 'list', false,
                                   '<p>Specificies your tracking parnter for affiliate commissions.  This field is ' .
                                   'required if you provide a tracking ID.  For example, if you sign up at the ' .
                                   '<a href="https://www.ebaypartnernetwork.com/files/hub/en-US/index.html">eBay ' .
@@ -123,8 +124,6 @@ $MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Network ID', 'network
                                   )
     );
 
-$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'tracking_id', 'text', false,
+$MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'affiliate_info=>tracking_id', 'text', false,
                                   'The tracking ID provided to your by your tracking partner.  For some services ' .
                                   'this may be called your campaign ID or affiliate ID.');
-
-?>

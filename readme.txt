@@ -4,8 +4,8 @@ Contributors: cybersprocket
 Donate Link: http://www.cybersprocket.com/products/moneypress-ebay/
 Tags: plugin,post,page,ebay,affiliate,store
 Requires at least: 2.6
-Tested up to: 2.9.2
-Stable tag: 1.2.2
+Tested up to: 3.0.4
+Stable tag: 2.0
 
 Our MoneyPress eBay plugin allows you to display products for sell on eBay based on keywords you choose.
 
@@ -44,14 +44,19 @@ Requirements: PHP 5.2 or later with support for cURL and SimpleXML.
 
 See the knowledgebase at http://redmine.cybersprocket.com/projects/mpress-ebay/wiki
 
-Please direct all inquiries to: info@cybersprocket.com
+All support inquiries should be posted at the forum section of the knowledgebase.
 
 == Changelog ==
+
+=v 2.0 (January 2011) =
+
+* Integrated with latest WPCSL Generic libraries
 
 = v1.2.2 (August 26 2010) =
 * Added support for filtering products by category ID
 * Changed the title
 * Added additional links on plugin page
+* Added additional options in navigation on plugin page
 
 = v1.2.1 (June 14th 2010) =
 * Add missing image from v1.2 release.
