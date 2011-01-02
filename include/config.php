@@ -16,7 +16,7 @@ if (class_exists('wpCSL_plugin__mpebay') === false) {
  * This section defines the settings for the admin menu.
  */
 
-$prefix = 'cls-mp-ebay';
+$prefix = 'csl-mp-ebay';
  
 $MP_ebay_plugin = new wpCSL_plugin__mpebay(
     array(
