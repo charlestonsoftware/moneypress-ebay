@@ -6,8 +6,8 @@
  * not already been loaded by another plugin that may also be
  * installed, and if not then we load it.
  */
-if (class_exists('wpCSL_plugin') === false) {
-    require_once(MP_EBAY_PLUGINDIR.'WPCSL-generic/CSL-plugin.php');
+if (class_exists('wpCSL_plugin__mpebay') === false) {
+    require_once(MP_EBAY_PLUGINDIR.'WPCSL-generic/classes/CSL-plugin.php');
 }
 
 //// SETTINGS ////////////////////////////////////////////////////////
@@ -16,9 +16,11 @@ if (class_exists('wpCSL_plugin') === false) {
  * This section defines the settings for the admin menu.
  */
 
-$MP_ebay_plugin = new wpCSL_plugin(
+$prefix = 'cls-mp-ebay';
+ 
+$MP_ebay_plugin = new wpCSL_plugin__mpebay(
     array(
-        'prefix'                 => 'csl-mp-ebay',
+        'prefix'                 => $prefix,
         'name'                   => 'MoneyPress : eBay Edition',
         'url'                    => 'http://cybersprocket.com/products/moneypress-ebay/',
         'support_url'            => 'http://redmine.cybersprocket.com/projects/mpress-ebay',
@@ -31,8 +33,8 @@ $MP_ebay_plugin = new wpCSL_plugin(
         'notifications_obj_name' => 'default',
         'settings_obj_name'      => 'default',
         'license_obj_name'       => 'default',
-        'shortcodes'             => array('ebay_show_items'),
         'driver_name'            => 'eBay',
+        'driver_type'            => 'Panhandler',
         'driver_defaults' => array(
                 'keywords' => 'keywords',
                 'sellers' => 'sellers',
@@ -42,8 +44,10 @@ $MP_ebay_plugin = new wpCSL_plugin(
                 'affiliate_info' => array('network_id', 'tracking_id')
             ),
         'driver_args'            => array(
-            "CyberSpr-e973-4a45-ad8b-430a8ee3b190"
-        )
+            'app_id' => "CyberSpr-e973-4a45-ad8b-430a8ee3b190"
+        ),
+        'shortcodes'             => array('ebay_show_items'),
+        
     )
 );
 
