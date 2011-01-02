@@ -50,6 +50,8 @@ All support inquiries should be posted at the forum section of the knowledgebase
 
 =v 2.0 (January 2011) =
 
+* Improve product output to allow for easier manipulation with CSS
+* Some product listing improvements
 * Integrated with latest WPCSL Generic libraries
 
 = v1.2.2 (August 26 2010) =
