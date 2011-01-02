@@ -7,7 +7,7 @@ Requires at least: 2.6
 Tested up to: 3.0.4
 Stable tag: 2.0
 
-Our MoneyPress eBay plugin allows you to display products for sell on eBay based on keywords you choose.
+This plugin allows you to display eBay listings on your web site by placing a simple shortcode in your page or post. Filter results by keyword, seller ID, or a combination of both.
 
 == Description ==
 
