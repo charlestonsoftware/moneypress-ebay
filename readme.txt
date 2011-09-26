@@ -1,11 +1,11 @@
 === MoneyPress : eBay Edition ===
 Plugin Name: MoneyPress : eBay Edition
 Contributors: cybersprocket
-Donate Link: http://www.cybersprocket.com/products/moneypress-ebay/
+Donate Link: http://www.cybersprocket.com/products/moneypress-ebay-edition/
 Tags: plugin,post,page,ebay,affiliate,store
-Requires at least: 2.6
-Tested up to: 3.0.4
-Stable tag: 2.0
+Requires at least: 3.0
+Tested up to: 3.2.1
+Stable tag: 2.1
 
 This plugin allows you to display eBay listings on your web site by placing a simple shortcode in your page or post. Filter results by keyword, seller ID, or a combination of both.
 
@@ -27,11 +27,29 @@ If you are a merchant on eBay then you can enter your seller ID to list only you
 
 on one of your pages to list everything you are selling on eBay.
 
+= Need Special Features? =
+
+Cyber Sprocket can provide modifications to the plugin to make it the perfect solution for your site.  
+We charge $60/hour to create custom additions that we roll into the next product release. 
+You get exactly the plugin you want and will have the benefit of having a mainstream product release.
+You get the benefit of getting our future upgrades without having to re-apply your patches.
+
+Learn more at: http://www.cybersprocket.com/
+
+= Related Links =
+
+* [MoneyPress : eBay Edition](http://www.cybersprocket.com/products/moneypress-ebay-edition/) 
+* [Other Cyber Sprocket Plugins](http://wordpress.org/extend/plugins/profile/cybersprocket/) 
+* [Our Facebook Page](http://www.facebook.com/cyber.sprocket.labs)
+
 == Installation ==
 
-Requirements: PHP 5.2 or later with support for cURL and SimpleXML.
+= Requirements =
 
- * Get the plugin from Cyber Sprocket Labs.
+PHP 5.2 or later with support for cURL and SimpleXML.
+
+= Main Plugin =
+
  * Install the plugin using the Zip file.
  * Browse to ‘MoneyPress : eBay Edition’ in your admin settings menu.
  * (Optional) Enter your seller ID if you want to list only your own products.
@@ -42,9 +60,23 @@ Requirements: PHP 5.2 or later with support for cURL and SimpleXML.
 
 == Frequently Asked Questions ==
 
+= Where can I find support for this plugin? =
+
 See the knowledgebase at http://redmine.cybersprocket.com/projects/mpress-ebay/wiki
 
 All support inquiries should be posted at the forum section of the knowledgebase.
+
+= How can i translate the plugin into my language? =
+
+* Find on internet the free program POEDIT, and learn how it works.
+* Use the .pot file located in the languages directory of this plugin to create or update the .po and .mo files.
+* Place these file in the languages subdirectory.
+* If everything is ok, email the files to lobbyjones@cybersprocket.com and we will add them to the next release.
+* For more information on POT files, domains, gettext and i18n have a look at the I18n for WordPress developers Codex page and more specifically at the section about themes and plugins.
+
+== Screenshots ==
+
+1. MoneyPress eBay Edition Logo
 
 == Changelog ==
 
