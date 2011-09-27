@@ -26,6 +26,7 @@ if (defined('MP_EBAY_PLUGINDIR')) {
             'plugin_url'             => MP_EBAY_PLUGINURL,
             'plugin_path'            => MP_EBAY_PLUGINDIR,
             'basefile'               => MP_EBAY_BASENAME,
+            'has_packages'           => true,
             'notifications_obj_name' => 'default',
             'settings_obj_name'      => 'default',
             'license_obj_name'       => 'default',
