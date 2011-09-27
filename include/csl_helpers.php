@@ -116,9 +116,9 @@ function list_options_packages_for_mpebay() {
             array(
                 'name'              => 'Plus Pack',
                 'help_text'         => 'A variety of enhancements are provided with this package.  ' .
-                                       'See the product page for details.  If you purchased this add-on ' .
+                                       'See the <a href="'.$MP_ebay_plugin->purchase_url.'" target="Cyber Sprocket">product page</a> for details.  If you purchased this add-on ' .
                                        'come back to this page to enter the license key to activate the new features.',
-                'sku'               => 'MPEBY',
+                'sku'               => 'MPEBY-PLUS',
                 'paypal_button_id'  => 'LJHLF4BHYMZMQ'
             )            
         );
