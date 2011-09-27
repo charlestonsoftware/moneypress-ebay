@@ -37,4 +37,13 @@ if (defined('MP_EBAY_BASENAME') === false) {
     define('MP_EBAY_BASENAME', plugin_basename(__FILE__));
 }
 
-require_once('include/config.php');
+if (defined('MP_EBAY_PREFIX') === false) {
+    define('MP_EBAY_PREFIX', 'csl-mp-ebay');
+}
+
+
+
+// Include our needed files
+//
+require_once(MP_EBAY_PLUGINDIR . '/include/config.php');
+require_once(MP_EBAY_PLUGINDIR . '/include/csl_helpers.php');
