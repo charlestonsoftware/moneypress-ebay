@@ -1,4 +1,9 @@
 <?php
+/****************************************************************************
+ ** file: csl_helpers.php
+ **
+ ** Helper functions for this plugin.
+ ***************************************************************************/
 
 
 /**************************************
@@ -91,4 +96,21 @@ function setup_admin_interface_for_mpebay() {
                                       'The tracking ID provided to your by your tracking partner.  For some services ' .
                                       'this may be called your campaign ID or affiliate ID.');
     
+}
+
+/**************************************
+ ** function: list_options_packages_for_mpebay
+ **
+ ** Setup the option package list.
+ **/
+function list_options_packages_for_mpebay() {
+    global $MP_ebay_plugin;   
+    $MP_ebay_plugin->license->add_licensed_package(
+            array(
+                'name'              => 'Widget Pack',
+                'help_text'         => 'Click the buy now button to purchase this add-on.  When done, refresh this page.',
+                'sku'               => 'SLPLUS-WIDGETS',
+                'paypal_button_id'  => 'FA99CZBPNZJGG'
+            )            
+        );
 }
