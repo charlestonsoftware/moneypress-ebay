@@ -13,7 +13,14 @@
  **/
 function setup_admin_interface_for_mpebay() {
     global $MP_ebay_plugin;     
+
+    // First setup our optional packages
+    //
+    list_options_packages_for_mpebay();    
     
+
+    // Then add our sections
+    //
     $MP_ebay_plugin->settings->add_section(
         array(
             'name'              => 'How to Use',
@@ -107,10 +114,12 @@ function list_options_packages_for_mpebay() {
     global $MP_ebay_plugin;   
     $MP_ebay_plugin->license->add_licensed_package(
             array(
-                'name'              => 'Widget Pack',
-                'help_text'         => 'Click the buy now button to purchase this add-on.  When done, refresh this page.',
-                'sku'               => 'SLPLUS-WIDGETS',
-                'paypal_button_id'  => 'FA99CZBPNZJGG'
+                'name'              => 'Plus Pack',
+                'help_text'         => 'A variety of enhancements are provided with this package.  ' .
+                                       'See the product page for details.  If you purchased this add-on ' .
+                                       'come back to this page to enter the license key to activate the new features.',
+                'sku'               => 'MPEBY',
+                'paypal_button_id'  => 'LJHLF4BHYMZMQ'
             )            
         );
 }
