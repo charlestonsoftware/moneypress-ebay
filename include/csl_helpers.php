@@ -11,21 +11,22 @@ function setup_admin_interface_for_mpebay() {
     
     $MP_ebay_plugin->settings->add_section(
         array(
-            'name' => 'How to Use',
-            'description' =>
-            '<p>To use the MoneyPress eBay plugin you only need to add a simple '                   .
-            'shortcode to any page where you want to show eBay products.  An example '              .
-            'of the shortcode is <code>[ebay_show_items keywords="kitchen furniture"]</code>. '     .
-            'Putting this code on a page would show ten products from eBay matching those '         .
-            'keywords, along with links to each item and their current price.  If you want '        .
-            'to change how many products are shown, you can either change the default value below ' .
-            'or you can change it in the shortcode itself, e.g. <code>[ebay_show_items '            .
-            'keywords="kitchen furniture" number_of_products=5]</code>, which would only show '       .
-            'five items.</p>' .
-            '<p>If you are an eBay merchant then you can enter your seller ID below, which will '        .
-            'make the plugin only list the items you are selling.  You can do this in conjunction with ' .
-            'keywords, or you can simply enter your seller ID below and use the shortcode '              .
-            '<code>[ebay_show_items]</code> to list every item you are selling.</p>'
+            'name'              => 'How to Use',
+            'description'       =>
+                '<p>To use the MoneyPress eBay plugin you only need to add a simple '                   .
+                'shortcode to any page where you want to show eBay products.  An example '              .
+                'of the shortcode is <code>[ebay_show_items keywords="kitchen furniture"]</code>. '     .
+                'Putting this code on a page would show ten products from eBay matching those '         .
+                'keywords, along with links to each item and their current price.  If you want '        .
+                'to change how many products are shown, you can either change the default value below ' .
+                'or you can change it in the shortcode itself, e.g. <code>[ebay_show_items '            .
+                'keywords="kitchen furniture" number_of_products=5]</code>, which would only show '       .
+                'five items.</p>' .
+                '<p>If you are an eBay merchant then you can enter your seller ID below, which will '        .
+                'make the plugin only list the items you are selling.  You can do this in conjunction with ' .
+                'keywords, or you can simply enter your seller ID below and use the shortcode '              .
+                '<code>[ebay_show_items]</code> to list every item you are selling.</p>',
+            'start_collapsed'   => true,
         )
     );
     

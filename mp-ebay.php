@@ -47,3 +47,7 @@ if (defined('MP_EBAY_PREFIX') === false) {
 //
 require_once(MP_EBAY_PLUGINDIR . '/include/config.php');
 require_once(MP_EBAY_PLUGINDIR . '/include/csl_helpers.php');
+
+
+// actions
+add_action('admin_init','setup_admin_interface_for_mpebay',10);
