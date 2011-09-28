@@ -54,6 +54,7 @@ require_once(MP_EBAY_PLUGINDIR . '/include/csl_helpers.php');
 
 
 // actions
+add_action('admin_menu', 'setup_admin_option_pages_for_mpebay');
 add_action('admin_print_styles','setup_ADMIN_stylesheet_for_mpebay');
 add_action('admin_init','setup_admin_interface_for_mpebay',10);
 
