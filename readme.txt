@@ -37,6 +37,14 @@ itself making it easier for users to activate and utilize the extended feature s
 The base feature set no longer runs in a demo/admin-only mode.   All basic features
 are fully functional and unrestricted.
 
+= Plus Pack (Premium Add-On) =
+
+The following features are now available in the Plus Pack:
+
+* CSS Theme System - several simple pre-defined themes are available.  Easily add your own to make listings look exactly right for your site.
+
+For more information on Plus Pack features, visit the [MoneyPress : eBay Edition](http://www.cybersprocket.com/products/moneypress-ebay-edition/)  pagee.
+
 = More Frequent Patches =
 
 The base plugin is fully functional with no restrictions and now has the latest
@@ -73,6 +81,12 @@ PHP 5.2 or later with support for cURL and SimpleXML.
  * (Optional) Enter your affiliate information.  For example, see the description for the ‘Network ID’ on how to sign up as an eBay affiliate.
  * Enter the ‘[ebay_show_items keywords=”…” category_id=""]’ on any page you want to list products.
  * Category ID is an optional attribute that allows you to filter the displayed products by category. It requires the numerical category id which can be found at http://pages.ebay.com/sellerinformation/growing/categorychanges.html. For example, the Category ID for Antiques is 20081 so to filter by antiques, the tag would be ‘[ebay_show_items category_id="20081"]’
+ 
+= Plus Pack =
+
+The Plus Pack requires the purchase of a license.  When you purchase the Plus Pack you will receive an email with a license key.
+Enter the license key in the field provided.   The Plus Pack will be automatically installed and activated once a valid license
+has been entered.
 
 == Frequently Asked Questions ==
 
@@ -100,7 +114,8 @@ All support inquiries should be posted at the forum section of the knowledgebase
 
 * Base product now requires NO LICENSE KEY.  The base product is fully functional.
 * New add-on packs now available from directly within the plugin.
-* Plus Pack : optional paid package now available (see website for details)
+* Plus Pack : optional paid package now available (see website for details).
+* Plus Pack : CSS themes are now available, several to choose from are provided.
 
 = v2.0 (January 2011) =
 
