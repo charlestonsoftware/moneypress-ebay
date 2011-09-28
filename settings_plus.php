@@ -48,7 +48,7 @@ $ebPlusSettings->add_section(
         'description' => ''        
     )
 );
-$MP_ebay_plugin->themes->add_admin_settings('');
+$MP_ebay_plugin->themes->add_admin_settings($ebPlusSettings, '');
 
 
 $ebPlusSettings->render_settings_page();
