@@ -12,10 +12,11 @@ global $ebPlusSettings;
 $ebPlusSettings = new wpCSL_settings__mpebay(
     array(
             'no_license'        => true,
-            'prefix'            => $MP_ebay_plugin->prefix,
+            'prefix'            => MP_EBAY_PREFIX,
             'url'               => $MP_ebay_plugin->url,
             'name'              => $MP_ebay_plugin->name . ' - Plus Pack Settings',
             'plugin_url'        => $MP_ebay_plugin->plugin_url,
+            'themes_enabled'    => true,
             'render_csl_blocks' => false,
             'settings_obj_name' => 'default'            
         )
@@ -35,6 +36,19 @@ $ebPlusSettings->add_section(
         'auto' => false
     )
 );
+
+
+//-------------------------
+// Display Settings Section
+//-------------------------
+//    
+$ebPlusSettings->add_section(
+    array(
+        'name' => __('Display Settings',MP_EBAY_PREFIX),
+        'description' => ''        
+    )
+);
+$MP_ebay_plugin->themes->add_admin_settings('');
 
 
 $ebPlusSettings->render_settings_page();
