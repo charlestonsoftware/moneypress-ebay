@@ -14,10 +14,8 @@
     //--------------------------------
     // Plus Version : Show Plus Settings Tab
     //
-    if (!$MP_ebay_plugin->license->packages['Plus Pack']->isenabled) {
+    if ($MP_ebay_plugin->license->packages['Plus Pack']->isenabled) {
         print '<li class="like-a-button"><a href="'.MP_EBAY_ADMINPAGE.'settings_plus.php">Settings: Plus</a></li>';
     }
     ?>    
 </ul>
-
-
