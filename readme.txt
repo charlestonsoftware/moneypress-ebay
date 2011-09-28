@@ -27,6 +27,22 @@ If you are a merchant on eBay then you can enter your seller ID to list only you
 
 on one of your pages to list everything you are selling on eBay.
 
+= Add On Packages Now Available =
+
+Our Light Edition (LE) and standard edition products are no longer separate.   
+You can now add the features of the full edition product without uninstalling the
+light edition version.  Option packs are now available directly from within the plugin
+itself making it easier for users to activate and utilize the extended feature set.
+
+The base feature set no longer runs in a demo/admin-only mode.   All basic features
+are fully functional and unrestricted.
+
+= More Frequent Patches =
+
+The base plugin is fully functional with no restrictions and now has the latest
+bug fixes and patches as soon as they are available.  In prior releases the light
+edition product was 3-6 months behind the plus edition for bug fixes and patches.
+
 = Need Special Features? =
 
 Cyber Sprocket can provide modifications to the plugin to make it the perfect solution for your site.  
@@ -79,6 +95,12 @@ All support inquiries should be posted at the forum section of the knowledgebase
 1. MoneyPress eBay Edition Logo
 
 == Changelog ==
+
+= v2.1 (September 2011) =
+
+* Base product now requires NO LICENSE KEY.  The base product is fully functional.
+* New add-on packs now available from directly within the plugin.
+* Plus Pack : optional paid package now available (see website for details)
 
 = v2.0 (January 2011) =
 
