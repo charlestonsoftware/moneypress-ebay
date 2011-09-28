@@ -18,7 +18,7 @@ if (defined('MP_EBAY_PLUGINDIR')) {
     $MP_ebay_plugin = new wpCSL_plugin__mpebay(
         array(
             'prefix'                 => MP_EBAY_PREFIX,
-            'name'                   => 'MoneyPress : eBay Edition',
+            'name'                   => 'MoneyPress eBay Edition',
             'url'                    => 'http://cybersprocket.com/products/moneypress-ebay/',
             'support_url'            => 'http://redmine.cybersprocket.com/projects/mpress-ebay',
             'purchase_url'           => 'http://cybersprocket.com/products/moneypress-ebay-edition/',
