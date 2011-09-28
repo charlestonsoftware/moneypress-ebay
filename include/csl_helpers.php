@@ -16,7 +16,22 @@ function setup_admin_interface_for_mpebay() {
 
     // First setup our optional packages
     //
-    list_options_packages_for_mpebay();        
+    list_options_packages_for_mpebay();
+    
+
+    //-------------------------
+    // Navbar Section
+    //-------------------------
+    //    
+    $MP_ebay_plugin->settings->add_section(
+        array(
+            'name' => 'Navigation',
+            'div_id' => 'mp_ebay_navbar',
+            'description' => $MP_ebay_plugin->helper->get_string_from_phpexec(MP_EBAY_PLUGINDIR.'/templates/navbar.php'),
+            'is_topmenu' => true,
+            'auto' => false
+        )
+    );    
     
     // Then add our sections
     //
@@ -101,8 +116,27 @@ function setup_admin_interface_for_mpebay() {
     $MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'affiliate_info=>tracking_id', 'text', false,
                                       'The tracking ID provided to your by your tracking partner.  For some services ' .
                                       'this may be called your campaign ID or affiliate ID.');
+
+    // Register CSS
+    //
+    wp_register_style( 'csl-mp_ebay-css', plugins_url('stylesheet.css', __FILE__) );    
     
 }
+
+/**************************************
+ ** function: setup_ADMIN_stylesheet_for_mpebay
+ **
+ ** Setup the CSS for the admin page.
+ **/
+function setup_ADMIN_stylesheet_for_mpebay() {            
+    if ( file_exists(MP_EBAY_PLUGINDIR.'css/admin.css')) {
+        wp_register_style('csl_mpebay_admin_css', MP_EBAY_PLUGINURL .'/css/admin.css'); 
+        wp_enqueue_style ('csl_mpebay_admin_css');
+    }      
+}
+
+
+
 
 /**************************************
  ** function: list_options_packages_for_mpebay

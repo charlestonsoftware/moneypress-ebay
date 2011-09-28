@@ -41,6 +41,10 @@ if (defined('MP_EBAY_PREFIX') === false) {
     define('MP_EBAY_PREFIX', 'csl-mp-ebay');
 }
 
+if (defined('MP_EBAY_ADMINPAGE') === false) {
+    define('MP_EBAY_ADMINPAGE', get_option('siteurl') . '/wp-admin/admin.php?page=' . MP_EBAY_PLUGINDIR );
+}
+
 
 
 // Include our needed files
@@ -50,4 +54,6 @@ require_once(MP_EBAY_PLUGINDIR . '/include/csl_helpers.php');
 
 
 // actions
+add_action('admin_print_styles','setup_ADMIN_stylesheet_for_mpebay');
 add_action('admin_init','setup_admin_interface_for_mpebay',10);
+

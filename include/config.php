@@ -27,9 +27,13 @@ if (defined('MP_EBAY_PLUGINDIR')) {
             'plugin_path'            => MP_EBAY_PLUGINDIR,
             'basefile'               => MP_EBAY_BASENAME,
             'has_packages'           => true,
+            
+            'helper_obj_name'        => 'default',
             'notifications_obj_name' => 'default',
             'settings_obj_name'      => 'default',
             'license_obj_name'       => 'default',
+            'themes_obj_name'        => 'default',
+            
             'driver_name'            => 'eBay',
             'driver_type'            => 'Panhandler',
             'driver_defaults' => array(
