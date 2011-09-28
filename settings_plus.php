@@ -5,6 +5,14 @@
  ** Settings available in the plus edition.
  ***************************************************************************/
 
+//---------------
+// Update Options
+//---------------
+if ($_POST) {
+    update_option(MP_EBAY_PREFIX.'-theme',$_POST[MP_EBAY_PREFIX.'-theme']);    
+}
+
+
 // Instantiate the form rendering object
 //
 global $MP_ebay_plugin;
@@ -16,6 +24,7 @@ $ebPlusSettings = new wpCSL_settings__mpebay(
             'url'               => $MP_ebay_plugin->url,
             'name'              => $MP_ebay_plugin->name . ' - Plus Pack Settings',
             'plugin_url'        => $MP_ebay_plugin->plugin_url,
+            'form_action'       => MP_EBAY_ADMINPAGE . 'settings_plus.php',
             'themes_enabled'    => true,
             'render_csl_blocks' => false,
             'settings_obj_name' => 'default'            
