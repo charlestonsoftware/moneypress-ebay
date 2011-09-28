@@ -16,9 +16,8 @@ function setup_admin_interface_for_mpebay() {
 
     // First setup our optional packages
     //
-    list_options_packages_for_mpebay();    
+    list_options_packages_for_mpebay();        
     
-
     // Then add our sections
     //
     $MP_ebay_plugin->settings->add_section(
@@ -123,3 +122,99 @@ function list_options_packages_for_mpebay() {
             )            
         );
 }
+
+
+/**************************************
+ ** function: add_plus_settings_for_mpebay()
+ ** 
+ ** Add the plus settings to the settings interface.
+ **
+ **/
+function add_plus_settings_for_mpebay() {
+    global $MP_ebay_plugin;         
+    
+    // The Themes
+    // No themes? Force the default at least
+    //
+    $themeArray = get_option(MP_EBAY_PREFIX.'-theme_array');
+    if (count($themeArray, COUNT_RECURSIVE) <= 2) {
+        $themeArray = array('Off-White Single Column' => 'mp-offwhite');
+    }    
+
+    // Check for theme files
+    //
+    $lastNewThemeDate = get_option(MP_EBAY_PREFIX.'-theme_lastupdated');
+    $newEntry = array();
+    if ($dh = opendir(MP_EBAY_PLUGINDIR.'css/')) {
+        while (($file = readdir($dh)) !== false) {
+            
+            // If not a hidden file
+            //
+            if (!preg_match('/^\./',$file)) {                
+                $thisFileModTime = filemtime(MP_EBAY_PLUGINDIR.'css/'.$file);
+                
+                // We have a new theme file possibly...
+                //
+                if ($thisFileModTime > $lastNewThemeDate) {
+                    $newEntry = GetThemeInfo(MP_EBAY_PLUGINDIR.'css/'.$file);
+                    $themeArray = array_merge($themeArray, array($newEntry['label'] => $newEntry['file']));                                        
+                    update_option(MP_EBAY_PREFIX.'-theme_lastupdated', $thisFileModTime);
+                }
+            }
+        }
+        closedir($dh);
+    }
+    
+    // We added at least one new theme
+    //
+    if (count($newEntry, COUNT_RECURSIVE) > 1) {
+        update_option(MP_EBAY_PREFIX.'-theme_array',$themeArray);
+    }  
+        
+    $MP_ebay_plugin->settings->add_item(
+        'Product Display', 
+        'Select A Theme',   
+        'theme',    
+        'list', 
+        false, 
+        'How should the plugin UI elements look?',
+        $themeArray
+    );
+}
+ 
+/**************************************
+ ** function: csl_mpcafe_configure_theme
+ ** 
+ ** Configure the plugin theme drivers based on the theme file meta data.
+ **
+ **/
+ function configure_theme_for_mpebay($themeFile) {
+    global $MP_ebay_plugin;
+    
+    $newEntry = GetThemeInfo(MP_EBAY_PLUGINDIR.$themeFile);
+    $MP_ebay_plugin->products->columns = $newEntry['columns'];
+ }
+ 
+ 
+/**************************************
+ ** function: GetThemeInfo
+ ** 
+ ** Extract the label & key from a CSS file header.
+ **
+ **/
+function GetThemeInfo ($filename) {    
+    $dataBack = array();
+    if ($filename != '') {
+       $default_headers = array(
+            'label' => 'label',
+            'file' => 'file',
+            'columns' => 'columns'
+           );
+        
+       $dataBack = get_file_data($filename,$default_headers,'');
+       $dataBack['file'] = preg_replace('/.css$/','',$dataBack['file']);       
+    }
+    
+    return $dataBack;
+ }
+ 
