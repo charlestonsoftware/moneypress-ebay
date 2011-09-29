@@ -115,12 +115,17 @@ function setup_admin_interface_for_mpebay() {
     
     $MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'affiliate_info=>tracking_id', 'text', false,
                                       'The tracking ID provided to your by your tracking partner.  For some services ' .
-                                      'this may be called your campaign ID or affiliate ID.');
+                                      'this may be called your campaign ID or affiliate ID.');    
+}
 
-    // Register CSS
-    //
-    wp_register_style( 'csl-mp_ebay-css', plugins_url('stylesheet.css', __FILE__) );    
-    
+/**************************************
+ ** function: setup_stylesheet_for_mpebay
+ **
+ ** Setup the CSS for the product pages.
+ **/
+function setup_stylesheet_for_mpebay() {
+    global $MP_ebay_plugin;
+    $MP_ebay_plugin->themes->assign_user_stylesheet();    
 }
 
 /**************************************
@@ -231,39 +236,4 @@ function add_plus_settings_for_mpebay() {
     );
 }
  
-/**************************************
- ** function: csl_mpcafe_configure_theme
- ** 
- ** Configure the plugin theme drivers based on the theme file meta data.
- **
- **/
- function configure_theme_for_mpebay($themeFile) {
-    global $MP_ebay_plugin;
-    
-    $newEntry = GetThemeInfo(MP_EBAY_PLUGINDIR.$themeFile);
-    $MP_ebay_plugin->products->columns = $newEntry['columns'];
- }
- 
- 
-/**************************************
- ** function: GetThemeInfo
- ** 
- ** Extract the label & key from a CSS file header.
- **
- **/
-function GetThemeInfo ($filename) {    
-    $dataBack = array();
-    if ($filename != '') {
-       $default_headers = array(
-            'label' => 'label',
-            'file' => 'file',
-            'columns' => 'columns'
-           );
-        
-       $dataBack = get_file_data($filename,$default_headers,'');
-       $dataBack['file'] = preg_replace('/.css$/','',$dataBack['file']);       
-    }
-    
-    return $dataBack;
- }
- 
+
