@@ -1,3 +1,4 @@
+heme
 <?php
 /****************************************************************************
  ** file: csl_helpers.php
@@ -13,11 +14,6 @@
  **/
 function setup_admin_interface_for_mpebay() {
     global $MP_ebay_plugin;     
-
-    // First setup our optional packages
-    //
-    list_options_packages_for_mpebay();
-    
 
     //-------------------------
     // Navbar Section
@@ -158,82 +154,7 @@ function setup_admin_option_pages_for_mpebay() {
  }
 
 
-/**************************************
- ** function: list_options_packages_for_mpebay
- **
- ** Setup the option package list.
- **/
-function list_options_packages_for_mpebay() {
-    global $MP_ebay_plugin;   
-    $MP_ebay_plugin->license->add_licensed_package(
-            array(
-                'name'              => 'Plus Pack',
-                'help_text'         => 'A variety of enhancements are provided with this package.  ' .
-                                       'See the <a href="'.$MP_ebay_plugin->purchase_url.'" target="Cyber Sprocket">product page</a> for details.  If you purchased this add-on ' .
-                                       'come back to this page to enter the license key to activate the new features.',
-                'sku'               => 'MPEBY-PLUS',
-                'paypal_button_id'  => 'LJHLF4BHYMZMQ'
-            )            
-        );
-}
 
 
-/**************************************
- ** function: add_plus_settings_for_mpebay()
- ** 
- ** Add the plus settings to the settings interface.
- **
- **/
-function add_plus_settings_for_mpebay() {
-    global $MP_ebay_plugin;         
-    
-    // The Themes
-    // No themes? Force the default at least
-    //
-    $themeArray = get_option(MP_EBAY_PREFIX.'-theme_array');
-    if (count($themeArray, COUNT_RECURSIVE) <= 2) {
-        $themeArray = array('Off-White Single Column' => 'mp-offwhite');
-    }    
-
-    // Check for theme files
-    //
-    $lastNewThemeDate = get_option(MP_EBAY_PREFIX.'-theme_lastupdated');
-    $newEntry = array();
-    if ($dh = opendir(MP_EBAY_PLUGINDIR.'/css/')) {
-        while (($file = readdir($dh)) !== false) {
-            
-            // If not a hidden file
-            //
-            if (!preg_match('/^\./',$file)) {                
-                $thisFileModTime = filemtime(MP_EBAY_PLUGINDIR.'css/'.$file);
-                
-                // We have a new theme file possibly...
-                //
-                if ($thisFileModTime > $lastNewThemeDate) {
-                    $newEntry = GetThemeInfo(MP_EBAY_PLUGINDIR.'css/'.$file);
-                    $themeArray = array_merge($themeArray, array($newEntry['label'] => $newEntry['file']));                                        
-                    update_option(MP_EBAY_PREFIX.'-theme_lastupdated', $thisFileModTime);
-                }
-            }
-        }
-        closedir($dh);
-    }
-    
-    // We added at least one new theme
-    //
-    if (count($newEntry, COUNT_RECURSIVE) > 1) {
-        update_option(MP_EBAY_PREFIX.'-theme_array',$themeArray);
-    }  
-        
-    $MP_ebay_plugin->settings->add_item(
-        'Product Display', 
-        'Select A Theme',   
-        'theme',    
-        'list', 
-        false, 
-        'How should the plugin UI elements look?',
-        $themeArray
-    );
-}
  
 
