@@ -47,4 +47,33 @@ if (defined('MP_EBAY_PLUGINDIR')) {
             
         )
     );
+    
+    // Setup our optional packages
+    //
+    add_options_packages_for_mpebay();    
+
+    // Tweak any add-on settings
+    //
+    if ($MP_ebay_plugin->license->packages['Plus Pack']->isenabled) {
+        $MP_ebay_plugin->themes_enabled = true;
+    }    
+}
+
+/**************************************
+ ** function: list_options_packages_for_mpebay
+ **
+ ** Setup the option package list.
+ **/
+function add_options_packages_for_mpebay() {
+    global $MP_ebay_plugin;   
+    $MP_ebay_plugin->license->add_licensed_package(
+            array(
+                'name'              => 'Plus Pack',
+                'help_text'         => 'A variety of enhancements are provided with this package.  ' .
+                                       'See the <a href="'.$MP_ebay_plugin->purchase_url.'" target="Cyber Sprocket">product page</a> for details.  If you purchased this add-on ' .
+                                       'come back to this page to enter the license key to activate the new features.',
+                'sku'               => 'MPEBY-PLUS',
+                'paypal_button_id'  => 'LJHLF4BHYMZMQ'
+            )            
+        );
 }
