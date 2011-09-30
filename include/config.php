@@ -51,13 +51,7 @@ if (defined('MP_EBAY_PLUGINDIR')) {
     
     // Setup our optional packages
     //
-    add_options_packages_for_mpebay();    
-
-    // Tweak any add-on settings
-    //
-    if ($MP_ebay_plugin->license->packages['Plus Pack']->isenabled) {
-        $MP_ebay_plugin->themes_enabled = true;
-    }    
+    add_options_packages_for_mpebay();     
 }
 
 /**************************************
@@ -67,6 +61,9 @@ if (defined('MP_EBAY_PLUGINDIR')) {
  **/
 function add_options_packages_for_mpebay() {
     global $MP_ebay_plugin;   
+    
+    // Add : Plus Pack
+    //
     $MP_ebay_plugin->license->add_licensed_package(
             array(
                 'name'              => 'Plus Pack',
@@ -77,4 +74,8 @@ function add_options_packages_for_mpebay() {
                 'paypal_button_id'  => 'LJHLF4BHYMZMQ'
             )            
         );
+    if ($MP_ebay_plugin->license->packages['Plus Pack']->isenabled) {
+        $MP_ebay_plugin->themes_enabled = true;
+    }       
+
 }
