@@ -110,7 +110,7 @@ All support inquiries should be posted at the forum section of the knowledgebase
 
 == Changelog ==
 
-= v2.1 (September 2011) =
+= v2.1 (October 2011) =
 
 * Base product now requires NO LICENSE KEY.  The base product is fully functional.
 * New add-on packs now available from directly within the plugin.
