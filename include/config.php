@@ -78,7 +78,7 @@ function add_options_packages_for_mpebay() {
                 'paypal_button_id'  => 'LJHLF4BHYMZMQ'
             )            
         );
-    if ($MP_ebay_plugin->license->packages['Plus Pack']->isenabled) {
+    if ($MP_ebay_plugin->license->packages['Plus Pack']->isenabled_after_forcing_recheck()) {
         $MP_ebay_plugin->themes_enabled = true;
     }       
 
