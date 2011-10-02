@@ -128,6 +128,24 @@ function setup_admin_interface_for_mpebay() {
                 'Yes' => 'true'
                 )
             );
+    
+        $MP_ebay_plugin->settings->add_item(
+            __('Primary Settings',MP_EBAY_PREFIX), 
+            __('Minimum Price',MP_EBAY_PREFIX), 
+            'min_price', 
+            'text', 
+            false,
+            'The minimum price for items listed.'
+            );
+        
+        $MP_ebay_plugin->settings->add_item(
+            __('Primary Settings',MP_EBAY_PREFIX), 
+            __('Maximum Price',MP_EBAY_PREFIX), 
+            'max_price', 
+            'text', 
+            false,
+            'The maximum price for items listed.'
+            );        
     }        
 }
 
