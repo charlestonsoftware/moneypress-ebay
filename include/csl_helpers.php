@@ -149,7 +149,7 @@ function setup_admin_interface_for_mpebay() {
         
         $MP_ebay_plugin->settings->add_item(
             __('Primary Settings',MP_EBAY_PREFIX), 
-            __('Country Listed IN',MP_EBAY_PREFIX), 
+            __('Country Listed In',MP_EBAY_PREFIX), 
             'country_listed_in', 
             'list', 
             false,
