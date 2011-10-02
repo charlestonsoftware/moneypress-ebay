@@ -146,6 +146,42 @@ function setup_admin_interface_for_mpebay() {
             false,
             'The maximum price for items listed.'
             );        
+        
+        $MP_ebay_plugin->settings->add_item(
+            __('Primary Settings',MP_EBAY_PREFIX), 
+            __('Country Listed IN',MP_EBAY_PREFIX), 
+            'country_listed_in', 
+            'list', 
+            false,
+            'The site on which the items were originally listed. ' .
+            'This can be useful for buyers who wish to see only items ' .
+            'on their domestic site either for delivery cost reasons or ' .
+            ' time reasons, such as for gifting occasions like ' .
+            'birthdays or holidays.' ,
+                  array(
+                      'United States (en-US)'   => 'EBAY-US',
+                      'US eBay Motors (en-US)'  => 'EBAY-MOTOR',                      
+                      'Austria (de-AT)'         => 'EBAY-AT',
+                      'Australia (en-AU)'       => 'EBAY-AU',
+                      'Belgium (fr-BE)'         => 'EBAY-FRBE',                      
+                      'Canada (en-CA)'          => 'EBAY-ENCA',                      
+                      'Canada (fr-CA)'          => 'EBAY-FRCA',                      
+                      'France (fr-FR)'          => 'EBAY-FR',                      
+                      'Germany (en-DE)'         => 'EBAY-DE',                      
+                      'Great Britian (en-GB)'   => 'EBAY-GB',                      
+                      'Hong Kong (zh-Hant)'     => 'EBAY-HK',                      
+                      'India (en-IN)'           => 'EBAY-IN',                      
+                      'Ireland (en-IE)'         => 'EBAY-IE',                      
+                      'Italy (it-IT)'           => 'EBAY-IT',                      
+                      'Malaysia (en-MY)'        => 'EBAY-MY',                      
+                      'Netherlands (nl-NL)'     => 'EBAY-NL',                      
+                      'Philippines (en-PH)'     => 'EBAY-PH',                      
+                      'Poland (pl-PL)'          => 'EBAY-PL',                      
+                      'Singapore (en-SG)'       => 'EBAY-SG',
+                      'Spain (es-ES)'           => 'EBAY-ES',                      
+                      'Switzerland (de-CH)'     => 'EBAY-CH',                      
+                  )
+            );        
     }        
 }
 
