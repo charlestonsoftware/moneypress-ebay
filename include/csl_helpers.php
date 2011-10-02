@@ -111,6 +111,24 @@ function setup_admin_interface_for_mpebay() {
     $MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Tracking ID', 'affiliate_info=>tracking_id', 'text', false,
                                       'The tracking ID provided to your by your tracking partner.  For some services ' .
                                       'this may be called your campaign ID or affiliate ID.');    
+
+    //-------------------------------------------------------
+    // Plus Version : Show Plus Settings Tab and Sidebar Menu
+    //
+    if ($MP_ebay_plugin->license->packages['Plus Pack']->isenabled_after_forcing_recheck()) {                
+        $MP_ebay_plugin->settings->add_item(
+            __('Primary Settings',MP_EBAY_PREFIX),
+            __('Search Descriptions',MP_EBAY_PREFIX),
+            'search_description',
+            'list',
+            false,
+            __('If set to yes, the description will be searched for the keywords.',MP_EBAY_PREFIX),
+            array(
+                'No'  => 'false',
+                'Yes' => 'true'
+                )
+            );
+    }        
 }
 
 /**************************************
