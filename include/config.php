@@ -39,10 +39,12 @@ if (defined('MP_EBAY_PLUGINDIR')) {
                     'category_id' => 'category_id',
                     'sort_order' => 'sort_order',
                     'product_count' => 'product_count',
+                    'search_description' => 'search_description',
                     'affiliate_info' => array('network_id', 'tracking_id')
                 ),
             'driver_args'            => array(
-                'app_id' => "CyberSpr-e973-4a45-ad8b-430a8ee3b190"
+                'app_id' => "CyberSpr-e973-4a45-ad8b-430a8ee3b190",
+                'plus_pack_enabled' => get_option(MP_EBAY_PREFIX.'-MPEBY-PLUS-isenabled')
             ),
             'shortcodes'             => array('mp-ebay','mp_ebay', 'ebay_show_items'),
             
