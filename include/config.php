@@ -34,16 +34,16 @@ if (defined('MP_EBAY_PLUGINDIR')) {
             'driver_name'            => 'eBay',
             'driver_type'            => 'Panhandler',
             'driver_defaults' => array(
-                    'keywords' => 'keywords',
-                    'sellers' => 'sellers',
+                    'affiliate_info' => array('network_id', 'tracking_id'),
                     'category_id' => 'category_id',
-                    'sort_order' => 'sort_order',
+                    'country_listed_in' => 'country_listed_in',
+                    'keywords' => 'keywords',
+                    'max_price'     => 'max_price',  
+                    'min_price'     => 'min_price',
                     'product_count' => 'product_count',
                     'search_description' => 'search_description',
-                    'affiliate_info' => array('network_id', 'tracking_id'),
-                    'min_price'     => 'min_price',
-                    'max_price'     => 'max_price',  
-                    'country_listed_in' => 'country_listed_in'
+                    'sellers' => 'sellers',
+                    'sort_order' => 'sort_order',
                 ),
             'driver_args'            => array(
                 'app_id' => "CyberSpr-e973-4a45-ad8b-430a8ee3b190",
