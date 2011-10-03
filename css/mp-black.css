@@ -70,3 +70,22 @@ div.csl_themes-zoombox a.thickbox {
     list-style: none;
 }
 
+/* Product Description List Items */
+div.csl_themes-prod_desc {
+    float: left;
+}
+
+div.csl_themes-prod_desc_entry {
+    clear:both;
+}
+
+div.csl_themes-prod_desc_label {
+    float: left;
+    width: 150px;
+    text-align: right;
+}
+    
+div.csl_themes-prod_desc_value {
+    float:left;
+    text-align:left;
+}
