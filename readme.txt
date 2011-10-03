@@ -17,15 +17,17 @@ List your own products by entering your seller ID, or sell any product on eBay a
 
 After installing the plugin (see below for instructions) you can show products on any page on your site by using the ‘[ebay_show_items]’ shortcode.  For example, entering the shortcode
 
-    [ebay_show_items keywords="cakes black bears"]
+    [mp_ebay keywords="wordpress books"]
 
 would populate your site with a listing of products matching those keywords.  It’s quite likely that there is not a large intersection between delicious cakes and ferocious black bears, but you never know.  Fortunately you can put any keywords you like into the shortcode, to best suit your website.
 
 If you are a merchant on eBay then you can enter your seller ID to list only your own products.  Or you could put it anyone’s seller ID, if you want to list their products.  If you have entered a seller ID then you do not have to provide any keywords.  For example, you could just write
 
-    [ebay_show_items]
+    [mp_ebay]
 
 on one of your pages to list everything you are selling on eBay.
+
+http://www.youtube.com/watch?v=N8SIKH00p7k
 
 = Add On Packages Now Available =
 
