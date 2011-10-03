@@ -108,7 +108,15 @@ All support inquiries should be posted at the forum section of the knowledgebase
 
 == Screenshots ==
 
-1. MoneyPress eBay Edition Logo
+1. Default listing output.
+2. Creating a page with a shortcode.
+3. Plus Pack premium options available.
+4. Plus Pack adds price and country filters to listings.
+5. Plus Pack also adds listing themes.
+6. Plus Pack "white theme" listing output.
+7. Affiliate linking/tracking built in!
+8. Standard settings filter by specific seller, and more.
+9. Product Logo 
 
 == Changelog ==
 
