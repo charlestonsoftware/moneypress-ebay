@@ -7,7 +7,7 @@
 /* Product Rows */ 
  .csl_themes-row {
     clear: both;
-    min-width: 852px;
+    min-width: 250px;
  }
  
  /* Product Box Header */
@@ -41,6 +41,7 @@ div.csl_themes-zoombox a.thickbox {
     margin: 10px 0;
     padding: 0px;
     min-height: 155px;
+    color: #F4F4F4;
 }
 
 .csl_themes-product div {
@@ -87,3 +88,11 @@ div.csl_themes-prod_desc_value {
     float:left;
     text-align:left;
 }
+
+div.csl_themes-row p.csl_themes-price a,
+div.csl_themes-row p.csl_themes-price
+{
+    text-decoration: none;
+    color: #AAAAFF;
+}
+

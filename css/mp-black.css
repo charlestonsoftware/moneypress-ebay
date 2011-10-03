@@ -9,7 +9,7 @@
 /* Product Rows */ 
  .csl_themes-row {
     clear: both;
-    min-width: 852px;
+    min-width: 250px;
  }
  
  /* Product Box Header */
@@ -88,4 +88,10 @@ div.csl_themes-prod_desc_label {
 div.csl_themes-prod_desc_value {
     float:left;
     text-align:left;
+}
+div.csl_themes-row p.csl_themes-price a,
+div.csl_themes-row p.csl_themes-price
+{
+    text-decoration: none;
+    color: #AAAAFF;
 }

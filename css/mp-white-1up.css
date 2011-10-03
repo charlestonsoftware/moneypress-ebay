@@ -10,7 +10,7 @@
 /* Product Rows */ 
  .csl_themes-row {
     clear: both;
-    min-width: 852px;
+    min-width: 250px;
  }
  
  /* Product Box Header */
@@ -43,7 +43,7 @@ div.csl_themes-zoombox a.thickbox {
     margin: 10px 2px;
     padding: 0px;
     min-height: 155px;
-    width: 600px;
+    width: 500px;
 }
 
 .csl_themes-product div {
