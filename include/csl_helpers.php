@@ -181,7 +181,17 @@ function setup_admin_interface_for_mpebay() {
                       'Spain (es-ES)'           => 'EBAY-ES',                      
                       'Switzerland (de-CH)'     => 'EBAY-CH',                      
                   )
+            );  
+        
+        $MP_ebay_plugin->settings->add_item(
+            __('Primary Settings',MP_EBAY_PREFIX), 
+            __('Detailed Listings',MP_EBAY_PREFIX), 
+            'detailed_listings', 
+            'checkbox', 
+            false,
+            'Show detailed listings.'
             );        
+                
     }        
 }
 

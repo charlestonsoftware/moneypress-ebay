@@ -37,6 +37,7 @@ if (defined('MP_EBAY_PLUGINDIR')) {
                     'affiliate_info' => array('network_id', 'tracking_id'),
                     'category_id' => 'category_id',
                     'country_listed_in' => 'country_listed_in',
+                    'detailed_listings' => 'detailed_listings',
                     'keywords' => 'keywords',
                     'max_price'     => 'max_price',  
                     'min_price'     => 'min_price',
