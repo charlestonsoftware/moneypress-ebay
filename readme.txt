@@ -44,6 +44,8 @@ are fully functional and unrestricted.
 The following features are now available in the Plus Pack:
 
 * CSS Theme System - several simple pre-defined themes are available.  Easily add your own to make listings look exactly right for your site.
+* Additional Default/Shortcode Filters - specify in more detail what products to return.
+* More listing details - turn on/off additional listing details.
 
 For more information on Plus Pack features, visit the [MoneyPress : eBay Edition](http://www.cybersprocket.com/products/moneypress-ebay-edition/)  pagee.
 
@@ -67,6 +69,7 @@ Learn more at: http://www.cybersprocket.com/
 * [MoneyPress : eBay Edition](http://www.cybersprocket.com/products/moneypress-ebay-edition/) 
 * [Other Cyber Sprocket Plugins](http://wordpress.org/extend/plugins/profile/cybersprocket/) 
 * [Our Facebook Page](http://www.facebook.com/cyber.sprocket.labs)
+* [Demo Site - see it in action](http://www.remodelcharleston.com)
 
 == Installation ==
 
