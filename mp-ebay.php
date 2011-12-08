@@ -25,6 +25,11 @@
  
  */
 
+/// DEBUGGING
+/* error_reporting(E_ALL); */
+/* ini_set('display_errors', '1'); */
+
+
 if (defined('MP_EBAY_PLUGINDIR') === false) {
     define('MP_EBAY_PLUGINDIR', plugin_dir_path(__FILE__));
 }
