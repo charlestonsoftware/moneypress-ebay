@@ -3,7 +3,7 @@ Plugin Name: MoneyPress : eBay Edition (Oct 2011)
 Contributors: cybersprocket
 Donate Link: http://www.cybersprocket.com/products/moneypress-ebay-edition/
 Tags: plugin,post,page,ebay,affiliate,store
-Requires at least: 3.0
+Requires at least: 3.1
 Tested up to: 3.2.1
 Stable tag: 2.1.2
 
