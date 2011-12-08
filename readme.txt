@@ -1,4 +1,4 @@
-=== MoneyPress : eBay Edition (Oct 2011) ===
+=== MoneyPress : eBay Edition ===
 Plugin Name: MoneyPress : eBay Edition (Oct 2011)
 Contributors: cybersprocket
 Donate Link: http://www.cybersprocket.com/products/moneypress-ebay-edition/
