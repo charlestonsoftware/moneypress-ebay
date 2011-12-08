@@ -123,7 +123,7 @@ All support inquiries should be posted at the forum section of the knowledgebase
 
 == Changelog ==
 
-= v2.1.3 (December 2012) =
+= v2.1.3 (December 2011) =
 * Fixed various issues with caching system and related php warnings
 
 = v2.1.1 (October 2011) =
