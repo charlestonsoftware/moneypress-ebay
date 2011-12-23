@@ -5,7 +5,7 @@ Donate Link: http://www.cybersprocket.com/products/moneypress-ebay-edition/
 Tags: plugin,post,page,ebay,affiliate,store
 Requires at least: 3.1
 Tested up to: 3.2.1
-Stable tag: 2.1.3
+Stable tag: 2.1.4
 
 This plugin allows you to display eBay listings on your web site by placing a simple shortcode in your page or post. Filter results by keyword, seller ID, or a combination of both.
 
@@ -123,7 +123,12 @@ All support inquiries should be posted at the forum section of the knowledgebase
 
 == Changelog ==
 
+= v2.1.4 (December 28th 2011) =
+
+* Admin panel styling updates.
+
 = v2.1.3 (December 2011) =
+
 * Fixed various issues with caching system and related php warnings
 
 = v2.1.1 (October 2011) =
