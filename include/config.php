@@ -23,6 +23,8 @@ if (defined('MP_EBAY_PLUGINDIR')) {
             'url'                    => 'http://cybersprocket.com/products/moneypress-ebay/',
             'support_url'            => 'http://redmine.cybersprocket.com/projects/mpress-ebay',
             'purchase_url'           => 'http://cybersprocket.com/products/moneypress-ebay-edition/',
+            'rate_url'              => 'http://wordpress.org/extend/plugins/moneypress-ebay-edition-r2/',
+            'forum_url'             => 'http://redmine.cybersprocket.com/projects/commercial-products/boards/31',
             'cache_path'             => MP_EBAY_PLUGINDIR . 'cache',
             'plugin_url'             => MP_EBAY_PLUGINURL,
             'plugin_path'            => MP_EBAY_PLUGINDIR,
