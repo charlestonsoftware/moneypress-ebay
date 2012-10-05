@@ -23,7 +23,8 @@ global $ebPlusSettings;
 $ebPlusSettings = new wpCSL_settings__mpebay(
     array(
             'no_license'        => true,
-            'prefix'            => MP_EBAY_PREFIX,
+            'prefix'            => $MP_ebay_plugin->prefix,
+            'css_prefix'        => $MP_ebay_plugin->css_prefix,
             'url'               => $MP_ebay_plugin->url,
             'name'              => $MP_ebay_plugin->name . ' - Pro Pack Settings',
             'plugin_url'        => $MP_ebay_plugin->plugin_url,
@@ -59,6 +60,25 @@ if ($MP_ebay_plugin->license->packages['Pro Pack']->isenabled_after_forcing_rech
     //-------------------
     if (!$new_license && $_POST) {
         update_option(MP_EBAY_PREFIX.'-theme',$_POST[MP_EBAY_PREFIX.'-theme']);
+
+
+        // Checkboxes with normal names
+        //
+        $BoxesToHit = array(
+            'show_bin_price',
+            );
+        foreach ($BoxesToHit as $JustAnotherBox) {
+            $MP_ebay_plugin->helper->SaveCheckBoxToDB($JustAnotherBox);
+        }
+
+        // Textboxes with normal names
+        //
+        $BoxesToHit = array(
+            'money_prefix',
+            );
+        foreach ($BoxesToHit as $JustAnotherBox) {
+            $MP_ebay_plugin->helper->SaveTextboxToDB($JustAnotherBox);
+        }
     }
 
     //-------------------------
@@ -72,6 +92,25 @@ if ($MP_ebay_plugin->license->packages['Pro Pack']->isenabled_after_forcing_rech
         )
     );
     $MP_ebay_plugin->themes->add_admin_settings($ebPlusSettings);
+
+
+    $ebPlusSettings->add_item(
+        __('Display Settings',MP_EBAY_PREFIX),
+        __('Show Buy It Now Price',MP_EBAY_PREFIX),
+        'show_bin_price',
+        'checkbox',
+        false,
+        __('When checked, show the BIN price next to the Buy It Now indicator.', MP_EBAY_PREFIX)
+        );
+
+    $ebPlusSettings->add_item(
+        __('Display Settings',MP_EBAY_PREFIX),
+        __('Money Prefix',MP_EBAY_PREFIX),
+        'money_prefix',
+        'text',
+        false,
+        __('What character do we put in front of money? (default $)', MP_EBAY_PREFIX)        
+        );
 
 } else {
 
