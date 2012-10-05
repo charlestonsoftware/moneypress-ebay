@@ -1,14 +1,14 @@
 <?php
 /*
   Plugin Name: MoneyPress : eBay Edition
-  Plugin URI: http://www.cybersprocket.com/products/moneypress-ebay-edition/
+  Plugin URI: http://www.charlestonsw.com/product/moneypress-ebay-edition/
   Description: This plugin allows you to display eBay listings on your web site by placing a simple shortcode in your page or post.
   Version: 2.1.5
-  Author: Cyber Sprocket Labs
-  Author URI: http://www.cybersprocket.com
+  Author: Charleston Software Associates
+  Author URI: http://www.charlestonsw.com
   License: GPL3
   
- Copyright (C) 2011 Cyber Sprocket Labs <info@cybersprocket.com>      
+ Copyright (C) 2012 Charlestonn Software Associates
 
  This program is free software; you can redistribute it and/or        
  modify it under the terms of the GNU General Public License          

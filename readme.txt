@@ -83,10 +83,10 @@ PHP 5.2 or later with support for cURL and SimpleXML.
 
 1. Default listing output.
 2. Creating a page with a shortcode.
-3. Plus Pack premium options available.
-4. Plus Pack adds price and country filters to listings.
-5. Plus Pack also adds listing themes.
-6. Plus Pack "white theme" listing output.
+3. Pro Pack premium options available.
+4. Pro Pack adds price and country filters to listings.
+5. Pro Pack also adds listing themes.
+6. Pro Pack "white theme" listing output.
 7. Affiliate linking/tracking built in!
 8. Standard settings filter by specific seller, and more.
 9. Product Logo
@@ -109,10 +109,10 @@ PHP 5.2 or later with support for cURL and SimpleXML.
 
 * Base product now requires NO LICENSE KEY.  The base product is fully functional.
 * New add-on packs now available from directly within the plugin.
-* Plus Pack : optional paid package now available (see website for details).
-* Plus Pack : CSS themes are now available, several to choose from are provided.
-* Plus Pack : More product filters.
-* Plus Pack : Add more details to listing.
+* Pro Pack : optional paid package now available (see website for details).
+* Pro Pack : CSS themes are now available, several to choose from are provided.
+* Pro Pack : More product filters.
+* Pro Pack : Add more details to listing.
 
 = v2.0 (January 2011) =
 

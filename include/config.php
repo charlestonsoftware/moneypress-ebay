@@ -20,11 +20,11 @@ if (defined('MP_EBAY_PLUGINDIR')) {
             'prefix'                 => MP_EBAY_PREFIX,
             'css_prefix'            => 'csl_themes',             
             'name'                   => 'MoneyPress eBay Edition',
-            'url'                    => 'http://cybersprocket.com/products/moneypress-ebay/',
-            'support_url'            => 'http://redmine.cybersprocket.com/projects/mpress-ebay',
-            'purchase_url'           => 'http://cybersprocket.com/products/moneypress-ebay-edition/',
+            'url'                    => 'http://www.charlestonsw.com/product/moneypress-ebay/',
+            'support_url'            => 'http://www.charlestonsw.com/support/',
+            'purchase_url'           => 'http://www.charlestonsw.com/product/moneypress-ebay-pro-pack/',
             'rate_url'              => 'http://wordpress.org/extend/plugins/moneypress-ebay-edition-r2/',
-            'forum_url'             => 'http://redmine.cybersprocket.com/projects/commercial-products/boards/31',
+            'forum_url'             => 'http://wordpress.org/support/plugin/moneypress-ebay-edition-r2/',
             'cache_path'             => MP_EBAY_PLUGINDIR . 'cache',
             'plugin_url'             => MP_EBAY_PLUGINURL,
             'plugin_path'            => MP_EBAY_PLUGINDIR,
@@ -50,7 +50,7 @@ if (defined('MP_EBAY_PLUGINDIR')) {
                 ),
             'driver_args'            => array(
                 'app_id' => "CyberSpr-e973-4a45-ad8b-430a8ee3b190",
-                'plus_pack_enabled' => get_option(MP_EBAY_PREFIX.'-MPEBY-PLUS-isenabled')
+                'pro_pack_enabled' => get_option(MP_EBAY_PREFIX.'-MPEBY-PRO-isenabled')
             ),
             'shortcodes'             => array('mp-ebay','mp_ebay', 'ebay_show_items'),
             
@@ -70,21 +70,21 @@ if (defined('MP_EBAY_PLUGINDIR')) {
 function add_options_packages_for_mpebay() {
     global $MP_ebay_plugin;   
     
-    // Add : Plus Pack
+    // Add : Pro Pack
     //
     $MP_ebay_plugin->license->add_licensed_package(
             array(
-                'name'              => 'Plus Pack',
+                'name'              => 'Pro Pack',
                 'help_text'         => 'A variety of enhancements are provided with this package.  ' .
-                                       'See the <a href="'.$MP_ebay_plugin->purchase_url.'" target="Cyber Sprocket">product page</a> for details.  If you purchased this add-on ' .
+                                       'See the <a href="'.$MP_ebay_plugin->purchase_url.'" target="CSA">product page</a> for details.  If you purchased this add-on ' .
                                        'come back to this page to enter the license key to activate the new features.',
-                'sku'               => 'MPEBY-PLUS',
-                'paypal_button_id'  => 'LJHLF4BHYMZMQ',
-                'paypal_upgrade_button_id' => 'VXPLD5S3QPZBN'
+                'sku'               => 'MPEBY-PRO',
+                'paypal_button_id'  => '79K7YNKRUVTA8',
+                'paypal_upgrade_button_id' => '79K7YNKRUVTA8'
             )
         );
 
-    if ($MP_ebay_plugin->license->packages['Plus Pack']->isenabled_after_forcing_recheck()) {
+    if ($MP_ebay_plugin->license->packages['Pro Pack']->isenabled_after_forcing_recheck()) {
         $MP_ebay_plugin->themes_enabled = true;
     }       
 

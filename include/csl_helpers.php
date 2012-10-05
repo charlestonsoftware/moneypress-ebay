@@ -113,9 +113,9 @@ function setup_admin_interface_for_mpebay() {
                                       'this may be called your campaign ID or affiliate ID.');    
 
     //-------------------------------------------------------
-    // Plus Version : Show Plus Settings Tab and Sidebar Menu
+    // Pro Version : Show Pro Settings Tab and Sidebar Menu
     //
-    if ($MP_ebay_plugin->license->packages['Plus Pack']->isenabled_after_forcing_recheck()) {                
+    if ($MP_ebay_plugin->license->packages['Pro Pack']->isenabled_after_forcing_recheck()) {
         $MP_ebay_plugin->settings->add_item(
             __('Primary Settings',MP_EBAY_PREFIX),
             __('Search Descriptions',MP_EBAY_PREFIX),
@@ -227,8 +227,8 @@ function setup_admin_option_pages_for_mpebay() {
     global $MP_ebay_plugin;     
     add_submenu_page(
         'csl-mp-ebay-options',
-        __("Settings: Plus", MP_EBAY_PREFIX), 
-        __("Settings: Plus", MP_EBAY_PREFIX), 
+        __("Settings: Pro", MP_EBAY_PREFIX),
+        __("Settings: Pro", MP_EBAY_PREFIX),
         'administrator', 
         MP_EBAY_PLUGINDIR.'/settings_plus.php'
     );             
