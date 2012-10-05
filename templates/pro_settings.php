@@ -1,6 +1,22 @@
 <?php
 global $MP_ebay_plugin;
 
+// Update license key only
+//
+$new_license = false;
+$lkPrefix = $MP_ebay_plugin->license->packages['Pro Pack']->prefix .
+          '-'.
+          $MP_ebay_plugin->license->packages['Pro Pack']->sku
+        ;
+
+$lkName = $lkPrefix . '-lk';
+if (!$MP_ebay_plugin->license->packages['Pro Pack']->isenabled_after_forcing_recheck() && isset($_POST[$lkName])) {
+    update_option($lkName, $_POST[$lkName]);
+    update_option($lkPrefix.'-isenabled', $MP_ebay_plugin->license->packages['Pro Pack']->isenabled_after_forcing_recheck());
+    $new_license = true;
+}
+
+
 // Instantiate the form rendering object
 //
 global $ebPlusSettings;
@@ -11,7 +27,7 @@ $ebPlusSettings = new wpCSL_settings__mpebay(
             'url'               => $MP_ebay_plugin->url,
             'name'              => $MP_ebay_plugin->name . ' - Pro Pack Settings',
             'plugin_url'        => $MP_ebay_plugin->plugin_url,
-            'form_action'       => MP_EBAY_ADMINPAGE . 'settings_plus.php',
+            'form_action'       => admin_url().'/admin.php?page='.$MP_ebay_plugin->prefix.'-pro_options',
             'themes_enabled'    => true,
             'render_csl_blocks' => false,
             'settings_obj_name' => 'default'
@@ -38,10 +54,10 @@ $ebPlusSettings->add_section(
 //
 if ($MP_ebay_plugin->license->packages['Pro Pack']->isenabled_after_forcing_recheck()) {
 
-    //---------------
-    // Update Options
-    //---------------
-    if ($_POST) {
+    //-------------------
+    // Update PRO Options
+    //-------------------
+    if (!$new_license && $_POST) {
         update_option(MP_EBAY_PREFIX.'-theme',$_POST[MP_EBAY_PREFIX.'-theme']);
     }
 
