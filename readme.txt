@@ -95,7 +95,12 @@ PHP 5.2 or later with support for cURL and SimpleXML.
 
 = v2.1.5 (October 2012) =
 
+* Added separate Pro Pack settings page.
+* Patch to theme loading.
+* Better Pro Pack license checking.
+* Refactor code for better isolation, reducing conflicts and corruption with/from other plugins.
 * Transition to CSA from CSL.
+
 
 = v2.1.4 (December 28th 2011) =
 
