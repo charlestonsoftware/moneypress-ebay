@@ -91,7 +91,7 @@ function setup_admin_interface_for_mpebay() {
     
     $MP_ebay_plugin->settings->add_item('Affiliate Settings', 'Network ID', 
                                         'affiliate_info=>network_id', 'list', false,
-                                      '<p>Specificies your tracking parnter for affiliate commissions.  This field is ' .
+                                      '<p>Specifies your tracking parnter for affiliate commissions.  This field is ' .
                                       'required if you provide a tracking ID.  For example, if you sign up at the ' .
                                       '<a href="https://www.ebaypartnernetwork.com/files/hub/en-US/index.html">eBay ' .
                                       'Partner Network</a> you will receive a confirmation email in a few days with ' .
