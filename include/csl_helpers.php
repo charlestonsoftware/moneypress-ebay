@@ -202,7 +202,7 @@ function setup_admin_interface_for_mpebay() {
  **/
 function setup_stylesheet_for_mpebay() {
     global $MP_ebay_plugin;
-    $MP_ebay_plugin->themes->assign_user_stylesheet();    
+    $MP_ebay_plugin->themes->assign_user_stylesheet('',true);
 }
 
 /**************************************
