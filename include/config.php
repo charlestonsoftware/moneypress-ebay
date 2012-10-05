@@ -32,6 +32,7 @@ if (defined('MP_EBAY_PLUGINDIR')) {
             'has_packages'           => true,
             
             'use_obj_defaults'       => true,
+            'no_default_css'         => false,
             
             'driver_name'            => 'eBay',
             'driver_type'            => 'Panhandler',

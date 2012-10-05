@@ -54,13 +54,16 @@ if (defined('MP_EBAY_ADMINPAGE') === false) {
 
 // Include our needed files
 //
+global $MP_ebay_plugin;
 require_once(MP_EBAY_PLUGINDIR . '/include/config.php');
 require_once(MP_EBAY_PLUGINDIR . '/include/csl_helpers.php');
 
+require_once(MP_EBAY_PLUGINDIR . '/include/actions_class.php');
+$MP_ebay_plugin->Actions = new MPEBY_Actions(array('parent'=>$MP_ebay_plugin));
 
 // actions
 add_action('wp_print_styles', 'setup_stylesheet_for_mpebay');
-add_action('admin_menu', 'setup_admin_option_pages_for_mpebay');
+add_action('admin_menu', array($MP_ebay_plugin->Actions,'admin_menu'));
 add_action('admin_print_styles','setup_ADMIN_stylesheet_for_mpebay');
 add_action('admin_init','setup_admin_interface_for_mpebay',10);
 

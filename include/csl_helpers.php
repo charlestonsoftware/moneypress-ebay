@@ -218,21 +218,7 @@ function setup_ADMIN_stylesheet_for_mpebay() {
 }
 
 
-/**************************************
- ** function: setup_admin_option_pages_for_mpebay
- **
- ** Setup the option pages for the admin interface.
- **/
-function setup_admin_option_pages_for_mpebay() {
-    global $MP_ebay_plugin;     
-    add_submenu_page(
-        'csl-mp-ebay-options',
-        __("Settings: Pro", MP_EBAY_PREFIX),
-        __("Settings: Pro", MP_EBAY_PREFIX),
-        'administrator', 
-        MP_EBAY_PLUGINDIR.'/settings_plus.php'
-    );             
- }
+
 
 
 
