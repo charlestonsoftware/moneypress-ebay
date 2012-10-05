@@ -69,7 +69,8 @@ if ($MP_ebay_plugin->license->packages['Pro Pack']->isenabled_after_forcing_rech
             'description' =>
                 __('The Pro Pack extends the features and settings of this plugin.', MP_EBAY_PREFIX) .
                 '<br/>'.
-                sprintf(__('Visit <a href="%s">%s</a> to learn more.', MP_EBAY_PREFIX), $MP_ebay_plugin->purchase_url, $MP_ebay_plugin->purchase_url)
+                sprintf(__('Visit <a href="%s">%s</a> to learn more.', MP_EBAY_PREFIX), $MP_ebay_plugin->purchase_url, $MP_ebay_plugin->purchase_url) .
+                '<div style="clear:both;">' . $MP_ebay_plugin->settings->ListThePackages(false) . '</div>'
         )
     );
 }
