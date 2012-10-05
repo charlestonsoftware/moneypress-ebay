@@ -55,7 +55,8 @@ if (defined('MP_EBAY_PLUGINDIR')) {
                 ),
             'driver_args'            => array(
                 'app_id' => "CyberSpr-e973-4a45-ad8b-430a8ee3b190",
-                'pro_pack_enabled' => get_option(MP_EBAY_PREFIX.'-MPEBY-PRO-isenabled')
+                'pro_pack_enabled' => get_option(MP_EBAY_PREFIX.'-MPEBY-PRO-isenabled'),
+                'prefix' => MP_EBAY_PREFIX
             ),
             'shortcodes'             => array('mp-ebay','mp_ebay', 'ebay_show_items'),
             
