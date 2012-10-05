@@ -18,21 +18,23 @@ if (defined('MP_EBAY_PLUGINDIR')) {
     $MP_ebay_plugin = new wpCSL_plugin__mpebay(
         array(
             'prefix'                 => MP_EBAY_PREFIX,
-            'css_prefix'            => 'csl_themes',             
+            'cache_path'             => MP_EBAY_PLUGINDIR . 'cache',
+            'plugin_url'             => MP_EBAY_PLUGINURL,
+            'plugin_path'            => MP_EBAY_PLUGINDIR,
+            'basefile'               => MP_EBAY_BASENAME,
+
             'name'                   => 'MoneyPress eBay Edition',
             'url'                    => 'http://www.charlestonsw.com/product/moneypress-ebay/',
             'support_url'            => 'http://www.charlestonsw.com/support/',
             'purchase_url'           => 'http://www.charlestonsw.com/product/moneypress-ebay-pro-pack/',
             'rate_url'              => 'http://wordpress.org/extend/plugins/moneypress-ebay-edition-r2/',
             'forum_url'             => 'http://wordpress.org/support/plugin/moneypress-ebay-edition-r2/',
-            'cache_path'             => MP_EBAY_PLUGINDIR . 'cache',
-            'plugin_url'             => MP_EBAY_PLUGINURL,
-            'plugin_path'            => MP_EBAY_PLUGINDIR,
-            'basefile'               => MP_EBAY_BASENAME,
+
             'has_packages'           => true,
-            
+
             'use_obj_defaults'       => true,
             'no_default_css'         => false,
+            'css_prefix'            => 'csl_themes',
             
             'driver_name'            => 'eBay',
             'driver_type'            => 'Panhandler',
