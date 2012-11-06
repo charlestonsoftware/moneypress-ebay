@@ -95,7 +95,7 @@ PHP 5.2 or later with support for cURL and SimpleXML.
 
 = v2.2 (November 2012) =
 
-* Add CSS Editor on admin page, make it easy to over-ride CSS for plugin.
+* [Pro Pack](http://www.charlestonsw.com/product/moneypress-ebay-pro-pack/) Add admin based CSS editor, make it easy to over-ride CSS for plugin.
 
 = v2.1.6 (October 2012) = 
 
