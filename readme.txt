@@ -70,16 +70,32 @@ PHP 5.2 or later with support for cURL and SimpleXML.
 
 [WordPress Support Forum](http://www.wordpress.org/support/plugin/moneypress-ebay-edition-r2)
 
+= What are the terms of the license? =
 
-= How can i translate the plugin into my language? =
+The license is based on GPL.  You get the code, feel free to modify it as you
+wish.  I prefer that customers buy a premium add-on because they like what I do and
+want to support my efforts to bring useful software to market.
+
+Learn more about [my thoughts on licensing and refunds](http://www.charlestonsw.com/license-and-refund-policy/).
+
+= What percentage of sales do I keep? =
+
+None.  Everything you earn through this plugin is yours, I don't siphon off
+any of your sales or earn anything unless you purchase a premium add-on.
+
+= How can I translate the plugin into my language? =
+
+The plugin uses the standard WordPress language file system.
 
 * Find on internet the free program POEDIT, and learn how it works.
-* Use the .pot file located in the languages directory of this plugin to create or update the .po and .mo files.
+* Use the .pot file located in the languages directory of this plugin to create or update the .po files.
 * Place these file in the languages subdirectory.
-* If everything is ok, email the files to lobbyjones@cybersprocket.com and we will add them to the next release.
+* If everything is ok, email the files to me and I will add them to the next release.
 * For more information on POT files, domains, gettext and i18n have a look at the I18n for WordPress developers Codex page and more specifically at the section about themes and plugins.
 
 == Screenshots ==
+
+More screenshots are available on the (CSA website)[http://www.charlestonsw.com/].
 
 1. Default listing output.
 2. Creating a page with a shortcode.
